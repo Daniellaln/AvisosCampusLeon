@@ -1,0 +1,28 @@
+01_inicio.png
+OK dosCanales True
+02_historial_vacio.png
+02b_ajustes_sin_pedir.png
+03_permiso_android.png
+04_permiso_denegado.png
+OK denegadoSinCierreConHistorial True
+04b_ajustes_denegado.png
+05_canales_android.png
+OK concederPermisoLimpiaError True
+OK dosNotificacionesIndependientes [2, 3]
+06_aviso_enviado.png
+07_panel_notificaciones.png
+OK toqueAbreYAutocancela True
+08_cuenta_regresiva.png
+OK cancelarNoNotifica True
+09_rotacion_cuenta.png
+OK recordatorioRotadoYMinimizado True
+10_recordatorio_urgente.png
+11_ajustes.png
+OK avionRealAmbosEstadosFueraDeAjustes True
+Traceback (most recent call last):
+  File "C:\Users\vladb\Desktop\JyL\laboratorio\LAB15-Planificacion\recorrido_fase2.py", line 59, in <module>
+    n=ids();e.adb('shell','dumpsys','battery','set','ac','1');notice('Conectado');e.adb('shell','dumpsys','battery','unplug');notice('Desconectado');assert len(ids()-n)==2;passed('cargadorRealAmbosEstadosFueraDeAjustes')
+                                                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\vladb\Desktop\JyL\laboratorio\LAB15-Planificacion\recorrido_fase2.py", line 16, in notice
+    raise AssertionError('No se publicó '+t)
+AssertionError: No se publicó Conectado

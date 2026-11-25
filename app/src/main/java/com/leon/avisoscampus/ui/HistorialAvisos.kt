@@ -46,7 +46,7 @@ fun HistorialAvisos(
         item(key = "titulo") {
             Text("Tus avisos", style = MaterialTheme.typography.headlineMedium,
                 color = c.onBackground, modifier = Modifier.semantics { heading() })
-            Text("Generados en esta sesión", style = MaterialTheme.typography.bodyMedium,
+            Text("Ejemplos generados en esta sesión", style = MaterialTheme.typography.bodyMedium,
                 color = c.onSurfaceVariant, modifier = Modifier.padding(top = 5.dp, bottom = 12.dp))
         }
         item(key = "filtros") {

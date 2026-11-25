@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="14" failures="0" errors="0" skipped="0" time="21.242" timestamp="2026-11-25T19:40:21" hostname="localhost">
+  <testsuite name="com.leon.avisoscampus.AvisosNotificacionesAndroidTest" tests="5" failures="0" errors="0" skipped="0" time="2.727" timestamp="2026-11-25T19:40:21" hostname="localhost">
+    <properties>
+      <property name="device" value="Pixel_8_Pro_2(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="permisoConcedidoCoincideConElPermisoRealDeAndroid" classname="com.leon.avisoscampus.AvisosNotificacionesAndroidTest" time="0.019" />
+    <testcase name="textoExpandidoConservaTodoElMensajeLargoYSusSaltosDeLinea" classname="com.leon.avisoscampus.AvisosNotificacionesAndroidTest" time="0.033" />
+    <testcase name="tresIdsUsanElCanalCorrectoYConservanContenidoIconoEIntentInmutable" classname="com.leon.avisoscampus.AvisosNotificacionesAndroidTest" time="0.005" />
+    <testcase name="crearCanalesDosVecesConservaAvisosDefaultYUrgentesHigh" classname="com.leon.avisoscampus.AvisosNotificacionesAndroidTest" time="0.03" />
+    <testcase name="pendingIntentDeLaNotificacionAbreMainActivity" classname="com.leon.avisoscampus.AvisosNotificacionesAndroidTest" time="2.64" />
+  </testsuite>
+  <testsuite name="com.leon.avisoscampus.AvisosPantallaAndroidTest" tests="7" failures="0" errors="0" skipped="0" time="17.626" timestamp="2026-11-25T19:40:21" hostname="localhost">
+    <properties>
+      <property name="device" value="Pixel_8_Pro_2(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="filtroPropioIncluyeCargadorYTodosRestauraElConjunto" classname="com.leon.avisoscampus.AvisosPantallaAndroidTest" time="2.792" />
+    <testcase name="inicioMuestraUnaTareaYLosAjustesQuedanEnSuDestino" classname="com.leon.avisoscampus.AvisosPantallaAndroidTest" time="3.245" />
+    <testcase name="dosAvisosSeConservanAlAbrirElHistorial" classname="com.leon.avisoscampus.AvisosPantallaAndroidTest" time="3.168" />
+    <testcase name="limiteDeVeinteSeAplicaDespuesDelFiltroEnLaListaDesplazable" classname="com.leon.avisoscampus.AvisosPantallaAndroidTest" time="1.871" />
+    <testcase name="escuchasDeAvionYCargadorSonIndependientesYNoSePierdenAlNavegar" classname="com.leon.avisoscampus.AvisosPantallaAndroidTest" time="2.531" />
+    <testcase name="elegirDiezSegundosIniciaLaCuentaYCancelarNoGeneraUnAviso" classname="com.leon.avisoscampus.AvisosPantallaAndroidTest" time="1.867" />
+    <testcase name="filtroSinCoincidenciasNoPresentaAvisosDeOtroOrigen" classname="com.leon.avisoscampus.AvisosPantallaAndroidTest" time="2.152" />
+  </testsuite>
+  <testsuite name="com.leon.avisoscampus.ReceptoresAndroidTest" tests="2" failures="0" errors="0" skipped="0" time="0.009" timestamp="2026-11-25T19:40:21" hostname="localhost">
+    <properties>
+      <property name="device" value="Pixel_8_Pro_2(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="cargadorAceptaConectarYDesconectarEIgnoraAvionYOtrasAcciones" classname="com.leon.avisoscampus.ReceptoresAndroidTest" time="0.005" />
+    <testcase name="avionAceptaSoloSuAccionYLeeLosDosEstados" classname="com.leon.avisoscampus.ReceptoresAndroidTest" time="0.004" />
+  </testsuite>
+</testsuites>

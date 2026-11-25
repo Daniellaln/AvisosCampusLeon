@@ -1,0 +1,18 @@
+{
+  "dosCanales": true,
+  "denegadoSinCierreConHistorial": true,
+  "concederPermisoLimpiaError": true,
+  "dosNotificacionesIndependientes": [
+    2,
+    3
+  ],
+  "toqueAbreYAutocancela": true,
+  "cancelarNoNotifica": true,
+  "recordatorioRotadoYMinimizado": true,
+  "avionRealAmbosEstadosFueraDeAjustes": true,
+  "cargadorRealAmbosEstadosFueraDeAjustes": true,
+  "filtroCargador": true,
+  "switchesApagadosNoGeneranAvisos": true,
+  "variantesClaraOscuraTexto130HorizontalSinAnimacionesCapturadas": true,
+  "sinCierresDuranteRecorrido": true
+}

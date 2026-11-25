@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.leon.avisoscampus.PruebasFase2Funciones" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-11-25T19:39:49.283Z" hostname="WILLIAM" time="0.022">
+  <properties/>
+  <testcase name="losDosInterruptoresCambianSuEstadoDeFormaIndependiente" classname="com.leon.avisoscampus.PruebasFase2Funciones" time="0.002"/>
+  <testcase name="viewModelMantieneSusFirmasYCamposLibresDeTiposDelSistemaAndroid" classname="com.leon.avisoscampus.PruebasFase2Funciones" time="0.007"/>
+  <testcase name="apagarLaEscuchaBloqueaNuevosAvisosYReactivarlaConservaHistorialYFiltro" classname="com.leon.avisoscampus.PruebasFase2Funciones" time="0.005"/>
+  <testcase name="desconectarRegistraYEmiteSuTextoConOrigenCargador" classname="com.leon.avisoscampus.PruebasFase2Funciones" time="0.003"/>
+  <testcase name="cargadorEmpiezaSinEscucharEIgnoraAmbosCambios" classname="com.leon.avisoscampus.PruebasFase2Funciones" time="0.002"/>
+  <testcase name="conectarRegistraYEmiteElMismoAvisoAunqueNoHayaPermiso" classname="com.leon.avisoscampus.PruebasFase2Funciones" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

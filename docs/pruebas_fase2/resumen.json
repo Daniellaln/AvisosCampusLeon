@@ -1,0 +1,74 @@
+{
+  "JVM": {
+    "tests": 23,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "Android": {
+    "tests": 14,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "lint": {
+    "errors": 0,
+    "warnings": 12
+  },
+  "recorrido": {
+    "dosCanales": true,
+    "denegadoSinCierreConHistorial": true,
+    "concederPermisoLimpiaError": true,
+    "dosNotificacionesIndependientes": [
+      2,
+      3
+    ],
+    "toqueAbreYAutocancela": true,
+    "cancelarNoNotifica": true,
+    "recordatorioRotadoYMinimizado": true,
+    "avionRealAmbosEstadosFueraDeAjustes": true,
+    "cargadorRealAmbosEstadosFueraDeAjustes": true,
+    "filtroCargador": true,
+    "switchesApagadosNoGeneranAvisos": true,
+    "variantesClaraOscuraTexto130HorizontalSinAnimacionesCapturadas": true,
+    "sinCierresDuranteRecorrido": true
+  },
+  "entorno": "Pixel 8 Pro AVD, Android API37, Windows; sin prueba en teléfono físico",
+  "fuentes": {
+    "app/src/main/AndroidManifest.xml": "0958b097a5bef40ddcbf4407522a191b65bfa6a3a9826a9f0e2fb8d144a02fb6",
+    "app/src/androidTest/java/com/leon/avisoscampus/AvisosAndroidTest.kt": "312ac12990898881ce99aa8fd3cadf18e60765a2fc698038801b7ef61778ae58",
+    "app/src/main/java/com/leon/avisoscampus/AvisosApp.kt": "0f03eec150f585249677961daeffabd1d1bb379d1987b2b90ffdb79665121ae3",
+    "app/src/main/java/com/leon/avisoscampus/MainActivity.kt": "6c13edb59344b16b82181518c8f414d99a793c080ce7de8a85e7c72cbdcca4c0",
+    "app/src/main/java/com/leon/avisoscampus/data/AvisosRepository.kt": "090b5ad4b4f87824be3a5443c5c374d92781b103b2670959a63c9a5f9dd15860",
+    "app/src/main/java/com/leon/avisoscampus/model/Modelos.kt": "a8a1c7045c10fa1b62aec91c2c5119a3348a61e0607a922c9fceb190b2f647e0",
+    "app/src/main/java/com/leon/avisoscampus/notificacion/Notificador.kt": "22f5b3220feb8d3c3a20557f3f6b48660ce628ec4e51ef1345ea169720f993d7",
+    "app/src/main/java/com/leon/avisoscampus/receiver/CargadorReceiver.kt": "93403449bc4542c1807a399bc5e80ad315cee21b68b941ac46e6929591b59d80",
+    "app/src/main/java/com/leon/avisoscampus/receiver/ModoAvionReceiver.kt": "5b66ddba1a86217cdc3f199c7d13f6923d227e5e874161b8b2c50f83ad551d59",
+    "app/src/main/java/com/leon/avisoscampus/ui/GlassControls.kt": "1b8d966da4ff88fd04f51b79190d8c046ad04e39f675c40f68b8690c45cf43cb",
+    "app/src/main/java/com/leon/avisoscampus/ui/HistorialAvisos.kt": "928f6608bc9b5e5ae52f244af5ece6f64e5113dafba92d49f2dd735702aa2599",
+    "app/src/main/java/com/leon/avisoscampus/ui/PantallaAvisos.kt": "78be65e5f00b2a7cfa05cd0efdb231d859dd00fd595e724fab017ced8a4319e7",
+    "app/src/main/java/com/leon/avisoscampus/viewmodel/AvisosViewModel.kt": "b09d66f5fe9ab8f2cd0a6a70ed00ed237f77f60fde8a0b5416fecde22116d973",
+    "app/src/main/java/com/leon/avisoscampus/viewmodel/AvisosViewModelFactory.kt": "1d744f82850524278667924ed71164cc44b7bb1caeed47de3f1c4431361502d0",
+    "app/src/main/java/com/leon/avisoscampus/ui/theme/Theme.kt": "4ec47e5c681c22ee3aa9ee13ec3f22f6dbabbb4f418610b97cc75615b9af101b",
+    "app/src/main/res/drawable/ic_ajustes.xml": "ed4726c00eb5fd840b426bc6f0fcc93cdfe51dbe6668b61eaaa02e50f047bfb1",
+    "app/src/main/res/drawable/ic_avion.xml": "8e8e5b77309816c1ad7ae57e353c265acaa6cbe10c74c31adce589d306da3e43",
+    "app/src/main/res/drawable/ic_campana.xml": "317e05019fa9c854f4f4c4c78873749d430a1a27f84d2da996ad2c981debdf78",
+    "app/src/main/res/drawable/ic_cancelar.xml": "299dccf0ecefb9800e962ca3d2e6b80f9055655f828136990eee6aeae0bbce1b",
+    "app/src/main/res/drawable/ic_cargador.xml": "9d15e58d9cad53e9be0ee210539c8c7606d71a96d10eb61a6fc3ab1e4a1596db",
+    "app/src/main/res/drawable/ic_cerrar.xml": "93bc8c594bf9c39c538fd902ccf8ae39ebdda947164a63c8164eff177ce7060e",
+    "app/src/main/res/drawable/ic_check.xml": "e3d0e2fcb714bd45b1359704684b286a876869c15e2785cd58782b7752463296",
+    "app/src/main/res/drawable/ic_enviar.xml": "8d4239c40a3203c916846d00f23e932d80960b9e678bec9e7273d9afbd61b8d7",
+    "app/src/main/res/drawable/ic_filtro.xml": "16c4e48c36ef8e8cc158d3f402fe79a7d588d6f92f314352c8d754fe51f613b3",
+    "app/src/main/res/drawable/ic_historial.xml": "818b5f82a4278683c56b46505907feb6826bc1601d834b94c1fe79fa06104c43",
+    "app/src/main/res/drawable/ic_info.xml": "db30f28680b64d0b9169109189141c4f7d0dd071a7a3a2ef24b9f765633195ab",
+    "app/src/main/res/drawable/ic_launcher_aviso.xml": "36fb8e20980ee4e6b0391604d0584415d3c9b8b00d16529d728c70961290e721",
+    "app/src/main/res/drawable/ic_logo.xml": "f919f7920ae1ad1873b301256e244b7adf888faa34f710065dc08f56f44f2c0a",
+    "app/src/main/res/drawable/ic_notificacion.xml": "a0c16ba70916a877017ec65e6ee1a8ea17dd72a8d3dd0e7555e4ddcf026f6dca",
+    "app/src/main/res/drawable/ic_reloj.xml": "f3a9512ad45986ff6aa50a72b01132dedb40aa7451802299051d149befadf63e",
+    "app/src/main/res/drawable/ic_volver.xml": "585e5d2b6dabdc2f4ef9f5f07e0272d65cbd05a9841d84c5efe0016e091de9a5",
+    "app/src/main/res/values/strings.xml": "97c4dfb3bdaefc9bbe39ec159ead1812c908ea3cccc8f63d4cf29a8aa497a457",
+    "app/src/main/res/values/styles.xml": "b5630702d6a1f4255e98363f9c9058a826dd5383e252860a6024eb5a7b05498c",
+    "app/src/test/java/com/leon/avisoscampus/AvisosViewModelTest.kt": "d8634e30e253dcc38aa1708f73af6ce0270671ebb4484054a6811d06ac91ee1f",
+    "app/src/test/java/com/leon/avisoscampus/PruebasFase2Funciones.kt": "bc16900858522772422f76c280faace41bad76c5547e4ad86320414bf4d23223"
+  }
+}

@@ -32,6 +32,7 @@ object Notificador {
   if (Build.VERSION.SDK_INT >= 26 && context.getSystemService(NotificationManager::class.java).getNotificationChannel(canal)?.importance == NotificationManager.IMPORTANCE_NONE) return false
   val builder = NotificationCompat.Builder(context, canal)
    .setSmallIcon(R.drawable.ic_notificacion).setContentTitle(aviso.titulo).setContentText(aviso.texto)
+   .setSubText("Ejemplo del laboratorio")
    .setStyle(NotificationCompat.BigTextStyle().bigText(aviso.texto))
    .setPriority(if (urgente) NotificationCompat.PRIORITY_HIGH else NotificationCompat.PRIORITY_DEFAULT).setAutoCancel(true)
   val intent = Intent(context, MainActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)

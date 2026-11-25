@@ -263,6 +263,8 @@ private fun InicioAvisos(
                     Text(if (recordatorio) "Revisa tu laboratorio pendiente" else "Tarea lista",
                         style = MaterialTheme.typography.titleLarge, color = c.onSurface)
                     if (!recordatorio) Text("Tu entrega fue registrada", style = MaterialTheme.typography.bodyMedium, color = c.onSurfaceVariant)
+                    Text("Aviso de ejemplo del laboratorio.", style = MaterialTheme.typography.bodySmall,
+                        color = c.onSurfaceVariant)
                     if (recordatorio) {
                         AnimatedContent(targetState = faltan, label = "segundos restantes",
                             transitionSpec = {
@@ -347,9 +349,10 @@ private fun AjustesAvisos(
                 color = if (permiso == PermisoUi.Denegado) c.error else c.primary,
                 modifier = Modifier.semantics { liveRegion = LiveRegionMode.Polite })
         }
-        AvisosGlassButton("Permitir notificaciones", permitir, Modifier.fillMaxWidth(), icon = R.drawable.ic_campana)
-        OutlinedButton(onClick = { abrirAjustes(null) }, modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
-            Text("Abrir ajustes")
+        if (permiso == PermisoUi.SinPedir) {
+            AvisosGlassButton("Permitir notificaciones", permitir, Modifier.fillMaxWidth(), icon = R.drawable.ic_campana)
+        } else {
+            AvisosGlassButton("Abrir ajustes", { abrirAjustes(null) }, Modifier.fillMaxWidth(), icon = R.drawable.ic_ajustes)
         }
         if (mensaje != null) Text(mensaje, style = MaterialTheme.typography.bodyMedium, color = c.error,
             modifier = Modifier.semantics { liveRegion = LiveRegionMode.Polite })

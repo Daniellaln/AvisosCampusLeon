@@ -1,94 +1,102 @@
 # AvisosCampus
 
-Daniella Leon · Laboratorio 15 · Fase 1
+Daniella Leon · Laboratorio 15 · Android nativo
 
-App Android que muestra notificaciones locales, programa un recordatorio de diez segundos, escucha el modo avión y conserva un historial en memoria. Paquete `com.leon.avisoscampus`. Funciona sin internet, Firebase ni claves.
+App de práctica con notificaciones locales, recordatorio cancelable de diez segundos y escucha de modo avión y cargador. Los avisos son ejemplos del laboratorio. Funciona sin internet, Firebase, servidor, archivos JSON de datos ni claves.
 
-Repositorio público: https://github.com/Daniellaln/AvisosCampusLeon
+[Repositorio público](https://github.com/Daniellaln/AvisosCampusLeon)
 
 ## Dos fases
 
-`main` contiene esta fase 1 funcional con el orden y las tarjetas azules de la guía. El rediseño y las mejoras de fase 2 irán después en `mejora-ia`; no se han implementado todavía. Se reconstruyó la base a partir de los contratos, modelos y ejemplos del Word porque no se recibió un proyecto descargable. Hubo asistencia de Codex: no se afirma que la fase haya sido realizada sin IA. Los mensajes naturales de commits siguen la preferencia expresa de Daniella, manteniendo un avance por paso.
+| Fase | Rama | Avances |
+|---|---|---|
+| 1 · Base funcional con las tarjetas de la guía | [main](https://github.com/Daniellaln/AvisosCampusLeon/tree/main) | 11 commits |
+| 2 · Luz y vidrio, navegación y tres mejoras aprobadas | [mejora-ia](https://github.com/Daniellaln/AvisosCampusLeon/tree/mejora-ia) | 6 adicionales; 17 en total |
+
+La base se reconstruyó desde el Word porque no se recibió un proyecto descargable. Hubo asistencia de Codex en el desarrollo. [PROMPTS.md](PROMPTS.md) reúne seis bloques preparados para Gemini; no se afirma una ejecución de Gemini.
+
+| Fase 1 · main | Fase 2 · mejora-ia |
+|---|---|
+| <img src="docs/capturas/01_inicio.png" width="250" alt="Inicio de fase 1 con tarjetas azules"> | <img src="docs/capturas_fase2/01_inicio.png" width="250" alt="Inicio de fase 2 con campana de vidrio y acción principal"> |
+| Funciones en tarjetas apiladas. | Avisos, Historial y Ajustes separados; una tarea principal visible. |
 
 ## Abrir y probar
 
-Abre esta carpeta en Android Studio, con JDK 21 y SDK 37. Gradle descarga las dependencias la primera vez; la app no necesita red. `minSdk 24`, `targetSdk 36`. Prueba en Android 13 o superior para ver el diálogo de POST_NOTIFICATIONS.
+Abre la carpeta en Android Studio con JDK 21 y SDK 37. Gradle descarga dependencias la primera vez; usar la app no requiere red. Paquete com.leon.avisoscampus, minSdk 24, targetSdk 36 y compileSdk 37.
 
-1. Pulsa Permitir notificaciones y acepta o deniega en el diálogo de Android.
-2. Pulsa Mostrar aviso dos veces. Son dos avisos distintos; toca uno desde la bandeja para abrir la app y quitarlo.
-3. Pulsa Recordar en 10 s. La cuenta continúa al minimizar o rotar mientras el proceso vive. Cancelar detiene el trabajo y no genera aviso.
-4. Activa Escuchar el modo avión. Cambia el ajuste del celular para recibir Activado o Desactivado; al apagar el switch no se generan esos avisos.
-5. Desplázate al historial. El filtro propio muestra Todos, Botón, Recordatorio o Modo avión sin borrar los otros registros.
+1. En Avisos, permite notificaciones y acepta o deniega el diálogo de Android 13 o superior. Ajustes muestra Sin pedir, Permitido o Denegado; solo pide el permiso cuando está sin pedir y, después, ofrece Abrir ajustes.
+2. En Ahora, pulsa Mostrar aviso dos veces. Los ids son distintos. Tocar una notificación abre la app y la retira de la bandeja.
+3. Elige En 10 s y programa el recordatorio. Puedes cancelar. La cuenta continúa al cambiar de destino, rotar o minimizar mientras el proceso vive.
+4. En Ajustes activa las escuchas independientes. Cambiar el modo avión o conectar y desconectar el cargador genera sus avisos; con el interruptor apagado, no.
+5. En Historial filtra por Todos, Botón, Recordatorio, Modo avión o Cargador. Revisa también Avisos y Urgentes desde Ajustes.
 
-## Función propia desde fase 1
+## Función propia y mejoras
 
-**Filtro del historial por origen.** No está pedido en la guía. Permite encontrar avisos del botón, recordatorios o cambios del modo avión; filtra antes de tomar los veinte más recientes y conserva la lista completa. Se mantendrá en la fase 2.
+**Función propia desde fase 1: filtro del historial por origen.** No la pide la guía. Filtra antes de tomar los veinte avisos más recientes y conserva los demás registros. Fase 2 la mantiene y añade CARGADOR.
 
-## Capturas reales
+Las tres mejoras aprobadas son:
 
-Tomadas en emulador Pixel 8 Pro API 37 en Windows. Los cuadros de permiso, Ajustes y la bandeja son pantallas reales de Android. No son maquetas.
+- **Canal Urgentes:** IMPORTANCE_HIGH para recordatorios; Avisos conserva importancia normal para botón, modo avión y cargador. Android y la configuración del usuario deciden cómo se presentan.
+- **Texto expandido:** BigTextStyle conserva el mensaje completo, incluidos textos largos y saltos de línea, al expandir la notificación.
+- **Escucha de cargador:** receptor e interruptor propios, independientes de modo avión, con origen en el historial.
 
-| Notificación en la bandeja | Recordatorio |
+El rediseño añade Outfit local, tres ilustraciones transparentes y catorce SVG con sus VectorDrawable. El botón responde al tacto, la campana al envío y el progreso a los segundos reales; las transiciones se eliminan con escala cero del sistema. Es Compose con tratamiento de vidrio, sin API de Apple ni refracción dinámica del fondo.
+
+## Cinco capturas de fase 2
+
+Capturas reales de Pixel 8 Pro emulado, Android API 37, en Windows. Los diálogos, Ajustes y la bandeja pertenecen a Android.
+
+| Notificación | Recordatorio |
 |---|---|
-| <img src="docs/capturas/05_panel_notificaciones.png" width="250" alt="Dos notificaciones del botón"> | <img src="docs/capturas/06_recordatorio.png" width="250" alt="Cuenta regresiva y Cancelar"> |
+| <img src="docs/capturas_fase2/07_panel_notificaciones.png" width="250" alt="Notificación real identificada como ejemplo del laboratorio"> | <img src="docs/capturas_fase2/08_cuenta_regresiva.png" width="250" alt="Cuenta de diez segundos con Cancelar"> |
 
-| Modo avión | Historial |
+| Modo avión en Historial | Historial con función propia |
 |---|---|
-| <img src="docs/capturas/09_modo_avion.png" width="250" alt="Aviso de modo avión"> | <img src="docs/capturas/10_historial.png" width="250" alt="Historial con origen y hora"> |
+| <img src="docs/capturas_fase2/12_historial.png" width="250" alt="Cambios reales de modo avión registrados en Historial"> | <img src="docs/capturas_fase2/13_filtro_cargador.png" width="250" alt="Historial filtrado por Cargador"> |
 
-| Permiso denegado | Función propia |
-|---|---|
-| <img src="docs/capturas/03_denegado.png" width="250" alt="Aviso guardado sin permiso"> | <img src="docs/capturas/11_filtro_propio.png" width="250" alt="Historial filtrado por recordatorios"> |
+| Permiso denegado |
+|---|
+| <img src="docs/capturas_fase2/04_permiso_denegado.png" width="250" alt="Permiso denegado con acceso a Ajustes"> |
 
-[Galería completa](docs/GALERIA.md) · [Aceptación y pruebas](docs/VERIFICACION.md) · [Rutas para exponer](docs/GUIA_CODIGO.md) · [Código de cada commit](docs/GUIA_COMMITS_MAIN.md)
+Fase 2: [galería completa](docs/GALERIA_FASE2.md) · [pruebas](docs/VERIFICACION_FASE2.md) · [código y líneas](docs/GUIA_CODIGO_FASE2.md) · [seis commits](docs/GUIA_COMMITS_FASE2.md) · [diseño](DESIGN.md) · [recursos y licencias](diseno/RECURSOS.md).
+
+Fase 1: [galería](docs/GALERIA.md) · [29 pruebas históricas](docs/VERIFICACION.md) · [código](docs/GUIA_CODIGO.md) · [once commits](docs/GUIA_COMMITS_MAIN.md). Sus capturas y evidencias se conservan en docs/capturas y docs/pruebas.
 
 ## Estructura
 
 ```text
 app/src/main/java/com/leon/avisoscampus/
-  AvisosApp.kt                     canal e instancia del Repository
-  MainActivity.kt                  composición y factory
-  model/Modelos.kt                 Aviso, Origen, PermisoUi
-  data/AvisosRepository.kt          contrato e implementación en memoria
-  notificacion/Notificador.kt       permiso, canal, notificación y PendingIntent
-  receiver/ModoAvionReceiver.kt     acción de modo avión y callback corto
-  viewmodel/AvisosViewModel.kt      StateFlow, SharedFlow, Job y filtro
-  viewmodel/AvisosViewModelFactory.kt
-  ui/PantallaAvisos.kt              permisos, eventos y DisposableEffect
-  ui/HistorialAvisos.kt             últimos veinte y filtro, sin ViewModel
-  ui/theme/Theme.kt                tema azul de fase 1
+  AvisosApp.kt                   canales y Repository
+  MainActivity.kt                composición y factory
+  model/Modelos.kt               Aviso, Origen y PermisoUi
+  data/AvisosRepository.kt        historial en memoria
+  notificacion/Notificador.kt     permisos, canales, BigTextStyle e intent
+  receiver/                      modo avión y cargador
+  viewmodel/AvisosViewModel.kt    StateFlow, SharedFlow, cuenta y filtro
+  ui/PantallaAvisos.kt            tres destinos y efectos Android
+  ui/HistorialAvisos.kt           filtro y veinte resultados
+  ui/GlassControls.kt            botón, ilustración y movimiento
+  ui/theme/Theme.kt               Outfit y esquemas claro/oscuro
 ```
 
-```mermaid
-flowchart TD
- UI[Pantalla Compose] -->|acciones| VM[AvisosViewModel]
- VM -->|StateFlow| UI
- VM -->|registrar| REPO[AvisosRepository]
- REPO --> MEM[Historial en memoria]
- VM -->|SharedFlow de avisos| UI
- UI --> NOTIF[Notificador con Context]
- NOTIF --> ANDROID[Canal y NotificationManager]
- ANDROID -->|PendingIntent inmutable| APP[MainActivity]
- SYSTEM[Modo avión de Android] --> RECEIVER[ModoAvionReceiver]
- RECEIVER -->|Boolean| VM
-```
-
-El ViewModel decide qué avisar y registra el aviso; la pantalla recoge el evento y llama al Notificador. El ViewModel y Repository no reciben Context. El receptor solo lee acción/estado; la pantalla lo registra con RECEIVER_NOT_EXPORTED y siempre lo retira en onDispose. No hay lista desplazable dentro de otra: el historial usa Column y veinte filas.
+El ViewModel decide y registra; la pantalla recoge el evento y llama al Notificador. ViewModel y Repository no guardan Context. El recolector y ambos receptores están fuera del contenido de las pestañas, así que navegar no los interrumpe. Los receptores leen el cambio, llaman a un callback breve y se retiran en onDispose.
 
 ## Para pensar
 
-**¿Por qué canal y permiso?** Desde Android 8 el canal agrupa y configura avisos; si falta un canal válido, la notificación no se muestra. Desde Android 13 se pide permiso; denegarlo impide mostrar los avisos normales. La app conserva el registro y permite abrir Ajustes.
+**¿Por qué canal y permiso?** Desde Android 8 el canal agrupa y configura avisos. Desde Android 13 se pide permiso para mostrarlos. Si se bloquean, la app conserva el registro y permite abrir Ajustes.
 
-**¿Por qué el ViewModel emite un evento?** Decide la acción sin conocer Context ni NotificationManager. La pantalla tiene acceso a Android y realiza el efecto, por lo que la lógica se puede probar con Kotlin y un Repository controlado.
+**¿Por qué el ViewModel emite un evento?** Decide sin conocer Context ni NotificationManager. La pantalla realiza el efecto Android y la lógica se puede probar con un Repository controlado.
 
-**¿El mismo id dos veces?** La segunda notificación actualiza o reemplaza a la anterior. El Repository asigna ids diferentes dentro de la sesión para mantener avisos separados.
+**¿El mismo id dos veces?** La segunda notificación reemplaza o actualiza la anterior. El Repository asigna ids distintos dentro de la sesión.
 
-**¿Por qué onReceive corto y quitar el receptor?** El sistema espera una respuesta breve; no es el lugar para tareas largas. Mientras está registrado, el receptor retiene el contexto. onDispose lo desregistra y evita fugas o escuchas duplicadas al recrear la pantalla.
+**¿Por qué onReceive corto y quitar el receptor?** Android espera una respuesta breve. Retirarlo en onDispose evita retener el contexto o duplicar escuchas al recrear la pantalla.
 
-**¿Local o push de Firebase?** Local para una acción que ya conoce el celular, como este recordatorio o su modo avión. Push para una novedad enviada por un servidor, como un aviso institucional. Firebase no se usa en esta fase.
+**¿Local o push de Firebase?** Local para una acción que conoce el celular. Push para una novedad enviada por servidor. Esta app usa avisos locales y no necesita Firebase.
 
 ## Comprobaciones y límites
 
-17 pruebas JVM y 12 Android aprobadas: 29 en total. Compilación debug y lint sin errores; las advertencias y XML se conservan en docs/pruebas. El recorrido adicional comprueba la bandeja real, permiso denegado, abrir Ajustes, tocar/autoCancel, diez segundos, minimizado, cancelación, rotación, avión con switch activo/inactivo y filtros. Las pruebas finales no se atribuyen a versiones anteriores; cada avance se compiló antes de su commit.
+Después de las correcciones finales pasaron **37 pruebas: 23 JVM y 14 Android**, sin fallos, errores ni omitidas. Compilación debug correcta y lint con 12 advertencias y cero errores. [Verificación de fase 2](docs/VERIFICACION_FASE2.md) conserva los XML, el registro y el alcance del recorrido visual; las 29 pruebas de fase 1 permanecen como evidencia histórica separada.
 
-El historial y los ids son de la sesión del proceso; no son persistentes. El recordatorio usa viewModelScope, no WorkManager, alarma ni servicio: no garantiza entrega después de forzar cierre, muerte del proceso, reinicio o suspensión prolongada. El historial representa avisos generados, incluidos los bloqueados por permiso; no es un recibo de entrega del sistema. No se afirma prueba en Mac ni teléfono físico.
+El historial y los ids viven en memoria del proceso. El recordatorio usa viewModelScope, sin alarma persistente, WorkManager ni servicio: no garantiza entrega tras muerte del proceso, cierre forzado, reinicio o suspensión prolongada. El historial registra avisos generados, incluso los bloqueados por permiso, y no confirma su entrega. Las comprobaciones corresponden al emulador en Windows; no se afirma prueba en teléfono físico ni Mac.
+
+

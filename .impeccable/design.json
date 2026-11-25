@@ -1,0 +1,617 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-25T19:44:07Z",
+  "title": "Design System: AvisosCampus",
+  "extensions": {
+    "colorMeta": {
+      "azul-luminoso": {
+        "role": "primary",
+        "displayName": "Azul luminoso",
+        "tonalRamp": [
+          "oklch(15% 0.2243 265.71)",
+          "oklch(26% 0.2243 265.71)",
+          "oklch(38% 0.2243 265.71)",
+          "oklch(49% 0.2243 265.71)",
+          "oklch(61% 0.2243 265.71)",
+          "oklch(72% 0.2243 265.71)",
+          "oklch(84% 0.2243 265.71)",
+          "oklch(95% 0.2243 265.71)"
+        ]
+      },
+      "sobre-azul": {
+        "role": "neutral",
+        "displayName": "Blanco sobre azul",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "azul-suave": {
+        "role": "primary",
+        "displayName": "Azul suave",
+        "tonalRamp": [
+          "oklch(15% 0.0334 272.79)",
+          "oklch(26% 0.0334 272.79)",
+          "oklch(38% 0.0334 272.79)",
+          "oklch(49% 0.0334 272.79)",
+          "oklch(61% 0.0334 272.79)",
+          "oklch(72% 0.0334 272.79)",
+          "oklch(84% 0.0334 272.79)",
+          "oklch(95% 0.0334 272.79)"
+        ]
+      },
+      "tinta-azul": {
+        "role": "primary",
+        "displayName": "Tinta azul",
+        "tonalRamp": [
+          "oklch(15% 0.1662 266.21)",
+          "oklch(26% 0.1662 266.21)",
+          "oklch(38% 0.1662 266.21)",
+          "oklch(49% 0.1662 266.21)",
+          "oklch(61% 0.1662 266.21)",
+          "oklch(72% 0.1662 266.21)",
+          "oklch(84% 0.1662 266.21)",
+          "oklch(95% 0.1662 266.21)"
+        ]
+      },
+      "coral-legible": {
+        "role": "secondary",
+        "displayName": "Coral legible",
+        "tonalRamp": [
+          "oklch(15% 0.1345 30.93)",
+          "oklch(26% 0.1345 30.93)",
+          "oklch(38% 0.1345 30.93)",
+          "oklch(49% 0.1345 30.93)",
+          "oklch(61% 0.1345 30.93)",
+          "oklch(72% 0.1345 30.93)",
+          "oklch(84% 0.1345 30.93)",
+          "oklch(95% 0.1345 30.93)"
+        ]
+      },
+      "coral-suave": {
+        "role": "secondary",
+        "displayName": "Coral suave",
+        "tonalRamp": [
+          "oklch(15% 0.0425 30.52)",
+          "oklch(26% 0.0425 30.52)",
+          "oklch(38% 0.0425 30.52)",
+          "oklch(49% 0.0425 30.52)",
+          "oklch(61% 0.0425 30.52)",
+          "oklch(72% 0.0425 30.52)",
+          "oklch(84% 0.0425 30.52)",
+          "oklch(95% 0.0425 30.52)"
+        ]
+      },
+      "tinta-coral": {
+        "role": "secondary",
+        "displayName": "Tinta coral",
+        "tonalRamp": [
+          "oklch(15% 0.0942 32.02)",
+          "oklch(26% 0.0942 32.02)",
+          "oklch(38% 0.0942 32.02)",
+          "oklch(49% 0.0942 32.02)",
+          "oklch(61% 0.0942 32.02)",
+          "oklch(72% 0.0942 32.02)",
+          "oklch(84% 0.0942 32.02)",
+          "oklch(95% 0.0942 32.02)"
+        ]
+      },
+      "lila": {
+        "role": "tertiary",
+        "displayName": "Lila",
+        "tonalRamp": [
+          "oklch(15% 0.1042 292.52)",
+          "oklch(26% 0.1042 292.52)",
+          "oklch(38% 0.1042 292.52)",
+          "oklch(49% 0.1042 292.52)",
+          "oklch(61% 0.1042 292.52)",
+          "oklch(72% 0.1042 292.52)",
+          "oklch(84% 0.1042 292.52)",
+          "oklch(95% 0.1042 292.52)"
+        ]
+      },
+      "lila-suave": {
+        "role": "tertiary",
+        "displayName": "Lila suave",
+        "tonalRamp": [
+          "oklch(15% 0.0454 297.97)",
+          "oklch(26% 0.0454 297.97)",
+          "oklch(38% 0.0454 297.97)",
+          "oklch(49% 0.0454 297.97)",
+          "oklch(61% 0.0454 297.97)",
+          "oklch(72% 0.0454 297.97)",
+          "oklch(84% 0.0454 297.97)",
+          "oklch(95% 0.0454 297.97)"
+        ]
+      },
+      "campo-frio": {
+        "role": "neutral",
+        "displayName": "Campo frío",
+        "tonalRamp": [
+          "oklch(15% 0.0095 273.36)",
+          "oklch(26% 0.0095 273.36)",
+          "oklch(38% 0.0095 273.36)",
+          "oklch(49% 0.0095 273.36)",
+          "oklch(61% 0.0095 273.36)",
+          "oklch(72% 0.0095 273.36)",
+          "oklch(84% 0.0095 273.36)",
+          "oklch(95% 0.0095 273.36)"
+        ]
+      },
+      "tinta": {
+        "role": "neutral",
+        "displayName": "Tinta",
+        "tonalRamp": [
+          "oklch(15% 0.0829 268.60)",
+          "oklch(26% 0.0829 268.60)",
+          "oklch(38% 0.0829 268.60)",
+          "oklch(49% 0.0829 268.60)",
+          "oklch(61% 0.0829 268.60)",
+          "oklch(72% 0.0829 268.60)",
+          "oklch(84% 0.0829 268.60)",
+          "oklch(95% 0.0829 268.60)"
+        ]
+      },
+      "superficie-clara": {
+        "role": "neutral",
+        "displayName": "Superficie clara",
+        "tonalRamp": [
+          "oklch(15% 0.0026 286.35)",
+          "oklch(26% 0.0026 286.35)",
+          "oklch(38% 0.0026 286.35)",
+          "oklch(49% 0.0026 286.35)",
+          "oklch(61% 0.0026 286.35)",
+          "oklch(72% 0.0026 286.35)",
+          "oklch(84% 0.0026 286.35)",
+          "oklch(95% 0.0026 286.35)"
+        ]
+      },
+      "texto-secundario": {
+        "role": "neutral",
+        "displayName": "Texto secundario",
+        "tonalRamp": [
+          "oklch(15% 0.0522 269.24)",
+          "oklch(26% 0.0522 269.24)",
+          "oklch(38% 0.0522 269.24)",
+          "oklch(49% 0.0522 269.24)",
+          "oklch(61% 0.0522 269.24)",
+          "oklch(72% 0.0522 269.24)",
+          "oklch(84% 0.0522 269.24)",
+          "oklch(95% 0.0522 269.24)"
+        ]
+      },
+      "contenedor-bajo": {
+        "role": "neutral",
+        "displayName": "Contenedor bajo",
+        "tonalRamp": [
+          "oklch(15% 0.0137 272.69)",
+          "oklch(26% 0.0137 272.69)",
+          "oklch(38% 0.0137 272.69)",
+          "oklch(49% 0.0137 272.69)",
+          "oklch(61% 0.0137 272.69)",
+          "oklch(72% 0.0137 272.69)",
+          "oklch(84% 0.0137 272.69)",
+          "oklch(95% 0.0137 272.69)"
+        ]
+      },
+      "contenedor-alto": {
+        "role": "neutral",
+        "displayName": "Contenedor alto",
+        "tonalRamp": [
+          "oklch(15% 0.0212 268.43)",
+          "oklch(26% 0.0212 268.43)",
+          "oklch(38% 0.0212 268.43)",
+          "oklch(49% 0.0212 268.43)",
+          "oklch(61% 0.0212 268.43)",
+          "oklch(72% 0.0212 268.43)",
+          "oklch(84% 0.0212 268.43)",
+          "oklch(95% 0.0212 268.43)"
+        ]
+      },
+      "borde-suave": {
+        "role": "neutral",
+        "displayName": "Borde suave",
+        "tonalRamp": [
+          "oklch(15% 0.0258 268.83)",
+          "oklch(26% 0.0258 268.83)",
+          "oklch(38% 0.0258 268.83)",
+          "oklch(49% 0.0258 268.83)",
+          "oklch(61% 0.0258 268.83)",
+          "oklch(72% 0.0258 268.83)",
+          "oklch(84% 0.0258 268.83)",
+          "oklch(95% 0.0258 268.83)"
+        ]
+      },
+      "error": {
+        "role": "error",
+        "displayName": "Error",
+        "tonalRamp": [
+          "oklch(15% 0.1638 21.33)",
+          "oklch(26% 0.1638 21.33)",
+          "oklch(38% 0.1638 21.33)",
+          "oklch(49% 0.1638 21.33)",
+          "oklch(61% 0.1638 21.33)",
+          "oklch(72% 0.1638 21.33)",
+          "oklch(84% 0.1638 21.33)",
+          "oklch(95% 0.1638 21.33)"
+        ]
+      },
+      "azul-noche": {
+        "role": "primary",
+        "displayName": "Azul noche",
+        "tonalRamp": [
+          "oklch(15% 0.0799 274.40)",
+          "oklch(26% 0.0799 274.40)",
+          "oklch(38% 0.0799 274.40)",
+          "oklch(49% 0.0799 274.40)",
+          "oklch(61% 0.0799 274.40)",
+          "oklch(72% 0.0799 274.40)",
+          "oklch(84% 0.0799 274.40)",
+          "oklch(95% 0.0799 274.40)"
+        ]
+      },
+      "azul-contenedor-noche": {
+        "role": "primary",
+        "displayName": "Contenedor azul noche",
+        "tonalRamp": [
+          "oklch(15% 0.1591 267.12)",
+          "oklch(26% 0.1591 267.12)",
+          "oklch(38% 0.1591 267.12)",
+          "oklch(49% 0.1591 267.12)",
+          "oklch(61% 0.1591 267.12)",
+          "oklch(72% 0.1591 267.12)",
+          "oklch(84% 0.1591 267.12)",
+          "oklch(95% 0.1591 267.12)"
+        ]
+      },
+      "coral-noche": {
+        "role": "secondary",
+        "displayName": "Coral noche",
+        "tonalRamp": [
+          "oklch(15% 0.0904 30.85)",
+          "oklch(26% 0.0904 30.85)",
+          "oklch(38% 0.0904 30.85)",
+          "oklch(49% 0.0904 30.85)",
+          "oklch(61% 0.0904 30.85)",
+          "oklch(72% 0.0904 30.85)",
+          "oklch(84% 0.0904 30.85)",
+          "oklch(95% 0.0904 30.85)"
+        ]
+      },
+      "lila-noche": {
+        "role": "tertiary",
+        "displayName": "Lila noche",
+        "tonalRamp": [
+          "oklch(15% 0.0833 289.83)",
+          "oklch(26% 0.0833 289.83)",
+          "oklch(38% 0.0833 289.83)",
+          "oklch(49% 0.0833 289.83)",
+          "oklch(61% 0.0833 289.83)",
+          "oklch(72% 0.0833 289.83)",
+          "oklch(84% 0.0833 289.83)",
+          "oklch(95% 0.0833 289.83)"
+        ]
+      },
+      "campo-noche": {
+        "role": "neutral",
+        "displayName": "Campo noche",
+        "tonalRamp": [
+          "oklch(15% 0.0548 268.79)",
+          "oklch(26% 0.0548 268.79)",
+          "oklch(38% 0.0548 268.79)",
+          "oklch(49% 0.0548 268.79)",
+          "oklch(61% 0.0548 268.79)",
+          "oklch(72% 0.0548 268.79)",
+          "oklch(84% 0.0548 268.79)",
+          "oklch(95% 0.0548 268.79)"
+        ]
+      },
+      "tinta-noche": {
+        "role": "neutral",
+        "displayName": "Tinta noche",
+        "tonalRamp": [
+          "oklch(15% 0.0262 274.11)",
+          "oklch(26% 0.0262 274.11)",
+          "oklch(38% 0.0262 274.11)",
+          "oklch(49% 0.0262 274.11)",
+          "oklch(61% 0.0262 274.11)",
+          "oklch(72% 0.0262 274.11)",
+          "oklch(84% 0.0262 274.11)",
+          "oklch(95% 0.0262 274.11)"
+        ]
+      },
+      "superficie-noche": {
+        "role": "neutral",
+        "displayName": "Superficie noche",
+        "tonalRamp": [
+          "oklch(15% 0.0559 268.30)",
+          "oklch(26% 0.0559 268.30)",
+          "oklch(38% 0.0559 268.30)",
+          "oklch(49% 0.0559 268.30)",
+          "oklch(61% 0.0559 268.30)",
+          "oklch(72% 0.0559 268.30)",
+          "oklch(84% 0.0559 268.30)",
+          "oklch(95% 0.0559 268.30)"
+        ]
+      },
+      "texto-secundario-noche": {
+        "role": "neutral",
+        "displayName": "Texto secundario noche",
+        "tonalRamp": [
+          "oklch(15% 0.0406 269.92)",
+          "oklch(26% 0.0406 269.92)",
+          "oklch(38% 0.0406 269.92)",
+          "oklch(49% 0.0406 269.92)",
+          "oklch(61% 0.0406 269.92)",
+          "oklch(72% 0.0406 269.92)",
+          "oklch(84% 0.0406 269.92)",
+          "oklch(95% 0.0406 269.92)"
+        ]
+      },
+      "contenedor-bajo-noche": {
+        "role": "neutral",
+        "displayName": "Contenedor bajo noche",
+        "tonalRamp": [
+          "oklch(15% 0.0571 267.77)",
+          "oklch(26% 0.0571 267.77)",
+          "oklch(38% 0.0571 267.77)",
+          "oklch(49% 0.0571 267.77)",
+          "oklch(61% 0.0571 267.77)",
+          "oklch(72% 0.0571 267.77)",
+          "oklch(84% 0.0571 267.77)",
+          "oklch(95% 0.0571 267.77)"
+        ]
+      },
+      "contenedor-alto-noche": {
+        "role": "neutral",
+        "displayName": "Contenedor alto noche",
+        "tonalRamp": [
+          "oklch(15% 0.0582 267.01)",
+          "oklch(26% 0.0582 267.01)",
+          "oklch(38% 0.0582 267.01)",
+          "oklch(49% 0.0582 267.01)",
+          "oklch(61% 0.0582 267.01)",
+          "oklch(72% 0.0582 267.01)",
+          "oklch(84% 0.0582 267.01)",
+          "oklch(95% 0.0582 267.01)"
+        ]
+      },
+      "borde-noche": {
+        "role": "neutral",
+        "displayName": "Borde noche",
+        "tonalRamp": [
+          "oklch(15% 0.0525 267.35)",
+          "oklch(26% 0.0525 267.35)",
+          "oklch(38% 0.0525 267.35)",
+          "oklch(49% 0.0525 267.35)",
+          "oklch(61% 0.0525 267.35)",
+          "oklch(72% 0.0525 267.35)",
+          "oklch(84% 0.0525 267.35)",
+          "oklch(95% 0.0525 267.35)"
+        ]
+      },
+      "error-noche": {
+        "role": "error",
+        "displayName": "Error noche",
+        "tonalRamp": [
+          "oklch(15% 0.0903 14.04)",
+          "oklch(26% 0.0903 14.04)",
+          "oklch(38% 0.0903 14.04)",
+          "oklch(49% 0.0903 14.04)",
+          "oklch(61% 0.0903 14.04)",
+          "oklch(72% 0.0903 14.04)",
+          "oklch(84% 0.0903 14.04)",
+          "oklch(95% 0.0903 14.04)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display-large": {
+        "displayName": "display-large",
+        "purpose": "Escala disponible en el tema; no forzar su uso."
+      },
+      "display-medium": {
+        "displayName": "display-medium",
+        "purpose": "Escala disponible en el tema; no forzar su uso."
+      },
+      "display-small": {
+        "displayName": "display-small",
+        "purpose": "Escala disponible en el tema; no forzar su uso."
+      },
+      "headline-large": {
+        "displayName": "headline-large",
+        "purpose": "Título de tarea, historial o cuenta."
+      },
+      "headline-medium": {
+        "displayName": "headline-medium",
+        "purpose": "Título de tarea, historial o cuenta."
+      },
+      "headline-small": {
+        "displayName": "headline-small",
+        "purpose": "Título de tarea, historial o cuenta."
+      },
+      "title-large": {
+        "displayName": "title-large",
+        "purpose": "Marca, grupos y contenido de avisos."
+      },
+      "title-medium": {
+        "displayName": "title-medium",
+        "purpose": "Marca, grupos y contenido de avisos."
+      },
+      "title-small": {
+        "displayName": "title-small",
+        "purpose": "Marca, grupos y contenido de avisos."
+      },
+      "body-large": {
+        "displayName": "body-large",
+        "purpose": "Texto legible de descripción y apoyo."
+      },
+      "body-medium": {
+        "displayName": "body-medium",
+        "purpose": "Texto legible de descripción y apoyo."
+      },
+      "body-small": {
+        "displayName": "body-small",
+        "purpose": "Texto legible de descripción y apoyo."
+      },
+      "label-large": {
+        "displayName": "label-large",
+        "purpose": "Acciones, filtros, origen y hora."
+      },
+      "label-medium": {
+        "displayName": "label-medium",
+        "purpose": "Acciones, filtros, origen y hora."
+      },
+      "label-small": {
+        "displayName": "label-small",
+        "purpose": "Acciones, filtros, origen y hora."
+      }
+    },
+    "shadows": [
+      {
+        "name": "boton-activo",
+        "value": "Modifier.shadow(5.dp, RoundedCornerShape(24.dp))",
+        "purpose": "Elevación nativa del botón activo; se retira al deshabilitar."
+      },
+      {
+        "name": "barra-inferior",
+        "value": "tonalElevation = 2.dp",
+        "purpose": "Capa tonal Material de navegación compacta."
+      }
+    ],
+    "motion": [
+      {
+        "name": "presion",
+        "value": "scale 0.975; spring(dampingRatio=0.65, stiffness=650)",
+        "purpose": "Respuesta al tacto del botón."
+      },
+      {
+        "name": "pulso",
+        "value": "wave 760ms LinearOutSlowInEasing; rotation -9°, 7°, -4°, 0°",
+        "purpose": "Confirmación visual tras intentar mostrar un aviso."
+      },
+      {
+        "name": "cuenta",
+        "value": "tween(800ms, LinearEasing)",
+        "purpose": "Interpolación del aro desde los segundos reales."
+      },
+      {
+        "name": "seccion",
+        "value": "fadeIn 180ms + slideInHorizontally 220ms (width/12); fadeOut 100ms",
+        "purpose": "Dirección compartida entre los tres destinos."
+      },
+      {
+        "name": "movimiento-desactivado",
+        "value": "ANIMATOR_DURATION_SCALE == 0 → snap / EnterTransition.None / ExitTransition.None",
+        "purpose": "Respeto del ajuste del sistema, observado en vivo."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "rail-android",
+        "value": "700dp"
+      },
+      {
+        "name": "tarea-dos-columnas",
+        "value": "560dp"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Botón principal",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Traducción de AvisosGlassButton para el panel. Android usa dp/sp y sombra nativa; el CSS representa su aspecto a escala de vista previa.",
+      "html": "<button class=\"ds-primary\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9\"/><path d=\"M10 21h4\"/></svg><span>Mostrar aviso</span></button>",
+      "css": ".ds-primary{font-family:Outfit,sans-serif;font-size:14px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:15px 24px;color:#fff;background:linear-gradient(#244dde,rgba(36,77,222,.94),#244dde);border:1px solid rgba(255,255,255,.7);border-bottom-color:rgba(255,255,255,.12);border-radius:24px;box-shadow:0 5px 12px rgba(20,32,76,.17);transition:transform .16s,filter .16s}.ds-primary:hover{filter:brightness(1.04)}.ds-primary:focus-visible{outline:3px solid #142d91;outline-offset:3px}.ds-primary:active{transform:scale(.975)}.ds-primary:disabled{background:rgba(20,32,76,.1);color:rgba(20,32,76,.4);box-shadow:none;cursor:default}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}"
+    },
+    {
+      "name": "Botón secundario",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Variante secundaria implementada por AvisosGlassButton(primary=false).",
+      "html": "<button class=\"ds-secondary\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9\"/><path d=\"M10 21h4\"/></svg><span>Abrir ajustes</span></button>",
+      "css": ".ds-secondary{font-family:Outfit,sans-serif;font-size:14px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:15px 24px;color:#14204c;background:linear-gradient(rgba(253,253,255,.9),rgba(230,236,251,.72));border:1px solid rgba(255,255,255,.7);border-bottom-color:rgba(255,255,255,.12);border-radius:24px;box-shadow:0 5px 12px rgba(20,32,76,.17);transition:transform .16s,filter .16s}.ds-secondary:hover{filter:brightness(.98)}.ds-secondary:focus-visible{outline:3px solid #244dde;outline-offset:3px}.ds-secondary:active{transform:scale(.975)}@media(prefers-reduced-motion:reduce){.ds-secondary{transition:none}}"
+    },
+    {
+      "name": "Selector de modo",
+      "kind": "custom",
+      "refersTo": "filter",
+      "description": "Vista previa del selector único Material; las formas y estados exactos los resuelve Material 3 en Android.",
+      "html": "<div class=\"ds-modes\" role=\"group\" aria-label=\"Cuándo avisar\"><button class=\"ds-mode ds-mode-active\" aria-pressed=\"true\">Ahora</button><button class=\"ds-mode\" aria-pressed=\"false\">En 10 s</button></div>",
+      "css": ".ds-modes{display:flex;width:300px}.ds-mode{font-family:Outfit,sans-serif;font-size:14px;font-weight:600;cursor:pointer;flex:1;min-height:48px;background:#f6f8ff;color:#14204c;border:1px solid #717b98;padding:10px 16px}.ds-mode:first-child{border-radius:24px 0 0 24px}.ds-mode:last-child{border-radius:0 24px 24px 0;border-left:0}.ds-mode-active{background:#e0e7ff;color:#142d91}.ds-mode:hover{background:#e9edfa}.ds-mode:focus-visible{outline:3px solid #244dde;outline-offset:3px}.ds-mode:active{filter:brightness(.96)}"
+    },
+    {
+      "name": "Filtro por origen",
+      "kind": "chip",
+      "refersTo": "filter",
+      "description": "FilterChip Material con objetivo táctil de 48 dp; selección visual de un origen.",
+      "html": "<button class=\"ds-filter\" aria-pressed=\"true\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9\"/><path d=\"M10 21h4\"/></svg><span>Botón</span></button>",
+      "css": ".ds-filter{font-family:Outfit,sans-serif;font-size:14px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:8px 16px;background:#e0e7ff;color:#142d91;border:1px solid #717b98;border-radius:8px}.ds-filter svg{width:18px;height:18px}.ds-filter:hover{filter:brightness(.98)}.ds-filter:focus-visible{outline:3px solid #244dde;outline-offset:3px}.ds-filter:active{filter:brightness(.94)}"
+    },
+    {
+      "name": "Navegación",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Traducción compacta de los tres destinos; la app pasa a NavigationRail desde 700 dp.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Secciones\"><button class=\"ds-dest ds-dest-active\" aria-current=\"page\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9\"/><path d=\"M10 21h4\"/></svg><span>Avisos</span></button><button class=\"ds-dest\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M4 7a9 9 0 1 1-1 7M4 2v5h5M12 7v6l4 2\"/></svg><span>Historial</span></button><button class=\"ds-dest\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\"><path d=\"M4 6h16M4 12h16M4 18h16\"/><circle cx=\"9\" cy=\"6\" r=\"2\" fill=\"#f2f5ff\"/><circle cx=\"15\" cy=\"12\" r=\"2\" fill=\"#f2f5ff\"/><circle cx=\"9\" cy=\"18\" r=\"2\" fill=\"#f2f5ff\"/></svg><span>Ajustes</span></button></nav>",
+      "css": ".ds-nav{display:flex;justify-content:space-around;width:360px;background:#f2f5ff;padding:12px 8px}.ds-dest{font-family:Outfit,sans-serif;font-size:14px;font-weight:500;display:flex;flex:1;flex-direction:column;align-items:center;gap:4px;min-height:48px;color:#505b7a;border:0;background:transparent;cursor:pointer}.ds-dest svg{padding:4px 14px;border-radius:24px}.ds-dest-active{color:#14204c}.ds-dest-active svg{background:#e0e7ff;color:#142d91}.ds-dest:hover{background:rgba(36,77,222,.04);border-radius:12px}.ds-dest:focus-visible{outline:3px solid #244dde;outline-offset:2px}.ds-dest:active{filter:brightness(.95)}"
+    },
+    {
+      "name": "Fila del historial",
+      "kind": "custom",
+      "refersTo": "history-origin",
+      "description": "Lectura continua de origen, hora y contenido; fila informativa sin acción ni hover añadido.",
+      "html": "<article class=\"ds-history\"><span class=\"ds-origin\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9\"/><path d=\"M10 21h4\"/></svg></span><div class=\"ds-content\"><div class=\"ds-meta\"><span>Botón</span><time>14:30</time></div><h3>Tarea lista</h3><p>Tu entrega fue registrada</p></div></article>",
+      "css": ".ds-history{font-family:Outfit,sans-serif;display:flex;align-items:flex-start;gap:14px;width:340px;padding:16px 0;border-bottom:1px solid rgba(212,219,237,.5);color:#14204c}.ds-origin{display:flex;align-items:center;justify-content:center;flex:0 0 44px;height:44px;border-radius:50%;background:#e0e7ff;color:#142d91}.ds-content{flex:1}.ds-meta{display:flex;justify-content:space-between;gap:10px;color:#244dde;font-size:14px;font-weight:500;line-height:20px}.ds-meta time{font-size:12px;color:#505b7a}.ds-history h3{margin:5px 0;font-size:18px;font-weight:600;line-height:24px}.ds-history p{margin:0;font-size:14px;line-height:21px;color:#505b7a}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Luz y vidrio",
+    "overview": "Luz y vidrio reúne azul luminoso, coral contenido y un campo blanco frío. Las imágenes ópticas dan identidad a una tarea sencilla; los textos y controles quedan fuera de sus reflejos para mantener la lectura.\n\nEs una aplicación Android nativa y clara. La forma expresiva se concentra en la ilustración central y en respuestas breves a acciones reales. El modo oscuro conserva esa familia con superficies azul noche. La composición de cada pantalla pertenece a su contrato de superficie; este documento fija el lenguaje reutilizable.",
+    "keyCharacteristics": [
+      "Vidrio ilustrado y controles Material 3 legibles.",
+      "Tipografía Outfit local con jerarquía en sp.",
+      "Una acción principal visible y detalle bajo demanda.",
+      "Movimiento ligado al estado y desactivable por el sistema."
+    ],
+    "rules": [
+      {
+        "name": "The Legibility Rule",
+        "body": "La tipografía y las acciones se dibujan con colores semánticos de MaterialTheme; los reflejos pertenecen a la imagen o al tratamiento del botón.",
+        "section": "colors"
+      },
+      {
+        "name": "The Native Type Rule",
+        "body": "Los tamaños se expresan en sp y los textos se componen en Android; nunca se hornean en una ilustración.",
+        "section": "typography"
+      },
+      {
+        "name": "The Quiet Depth Rule",
+        "body": "La profundidad acompaña una acción reconocible; el texto queda sobre superficies legibles.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do conservar Outfit local y las funciones tipográficas de Material 3.",
+      "Do usar ilustraciones transparentes existentes y conservar texto y controles fuera de los reflejos.",
+      "Do vincular movimiento con envío, cuenta, navegación o inserción de avisos.",
+      "Do mantener objetivos táctiles de al menos 48 dp y respetar el tamaño de letra del sistema.",
+      "Do identificar el contenido de práctica como ejemplo del laboratorio."
+    ],
+    "donts": [
+      "Don't presentar este tratamiento como API de Apple o refracción dinámica del fondo.",
+      "Don't colocar texto o controles esenciales dentro de imágenes rasterizadas.",
+      "Don't convertir el inicio en una pila de tarjetas con todas las funciones.",
+      "Don't añadir movimiento continuo o ignorar la escala cero de animaciones.",
+      "Don't tratar el historial como confirmación de entrega o almacenamiento persistente."
+    ]
+  }
+}

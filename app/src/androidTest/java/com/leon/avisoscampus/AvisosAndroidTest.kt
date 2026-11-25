@@ -82,8 +82,12 @@ class AvisosPantallaAndroidTest {
         compose.onNodeWithContentDescription("Ir a Avisos").assertIsSelected()
         compose.onNodeWithContentDescription("Ir a Historial").assertIsDisplayed()
         compose.onNodeWithContentDescription("Ir a Ajustes").performClick()
-        compose.onNodeWithText("Permitir notificaciones").assertExists()
-        compose.onNodeWithText("Abrir ajustes").assertExists()
+        if (Notificador.tienePermiso(ApplicationProvider.getApplicationContext())) {
+            compose.onNodeWithText("Permitir notificaciones").assertDoesNotExist()
+            compose.onNodeWithText("Abrir ajustes").assertExists()
+        } else {
+            compose.onNodeWithText("Permitir notificaciones").assertExists()
+        }
         compose.onNodeWithContentDescription("Escuchar el modo avión").assertExists()
         compose.onNodeWithContentDescription("Escuchar el cargador").assertExists()
         compose.onNodeWithContentDescription("Ir a Ajustes").assertIsSelected()
@@ -275,6 +279,7 @@ class AvisosNotificacionesAndroidTest {
             val urgente = aviso.origen == Origen.RECORDATORIO
             assertEquals(aviso.titulo, notificacion.extras.getString(Notification.EXTRA_TITLE))
             assertEquals(aviso.texto, notificacion.extras.getString(Notification.EXTRA_TEXT))
+            assertEquals("Ejemplo del laboratorio", notificacion.extras.getCharSequence(Notification.EXTRA_SUB_TEXT)?.toString())
             assertEquals(if (urgente) Notificador.CANAL_URGENTE else Notificador.CANAL,
                 notificacion.channelId)
             assertEquals(if (urgente) Notification.PRIORITY_HIGH else Notification.PRIORITY_DEFAULT,

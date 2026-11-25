@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.leon.avisoscampus.AvisosViewModelTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-11-25T19:39:49.085Z" hostname="WILLIAM" time="0.196">
+  <properties/>
+  <testcase name="sePuedeProgramarOtroRecordatorioDespuesDeCancelar" classname="com.leon.avisoscampus.AvisosViewModelTest" time="0.145"/>
+  <testcase name="recordatorioDeDiezSegundosNoLlegaAntesYEmiteUnaSolaVezAlVencer" classname="com.leon.avisoscampus.AvisosViewModelTest" time="0.006"/>
+  <testcase name="cuentaRegresivaExponeDiezHastaUnoSinMostrarCero" classname="com.leon.avisoscampus.AvisosViewModelTest" time="0.004"/>
+  <testcase name="apagarLaEscuchaImpideNuevosAvisosSinBorrarElHistorial" classname="com.leon.avisoscampus.AvisosViewModelTest" time="0.003"/>
+  <testcase name="botonRegistraYEmiteElMismoAvisoConLosDatosDelLaboratorio" classname="com.leon.avisoscampus.AvisosViewModelTest" time="0.004"/>
+  <testcase name="segundoRecordatorioActivoSeIgnoraSinAdelantarNiReiniciarElPrimero" classname="com.leon.avisoscampus.AvisosViewModelTest" time="0.004"/>
+  <testcase name="modoAvionConEscuchaRegistraYEmiteActivadoYDesactivado" classname="com.leon.avisoscampus.AvisosViewModelTest" time="0.003"/>
+  <testcase name="seleccionarOrigenYVolverATodosConservaElHistorialCompleto" classname="com.leon.avisoscampus.AvisosViewModelTest" time="0.004"/>
+  <testcase name="cancelarALaMitadLimpiaLaCuentaSinGuardarNiEmitirAviso" classname="com.leon.avisoscampus.AvisosViewModelTest" time="0.002"/>
+  <testcase name="permisoDenegadoConservaElAvisoYPermiteComunicarElFalloDeLaPantalla" classname="com.leon.avisoscampus.AvisosViewModelTest" time="0.003"/>
+  <testcase name="sePuedeProgramarOtroRecordatorioDespuesDeTerminar" classname="com.leon.avisoscampus.AvisosViewModelTest" time="0.004"/>
+  <testcase name="avisoEsperaUnRecolectorYNoSeRepiteAlReconectarlo" classname="com.leon.avisoscampus.AvisosViewModelTest" time="0.005"/>
+  <testcase name="modoAvionSinEscuchaIgnoraTantoActivacionComoDesactivacion" classname="com.leon.avisoscampus.AvisosViewModelTest" time="0.002"/>
+  <testcase name="estadoInicialSinAvisosPermisoRecordatorioEscuchaNiFiltro" classname="com.leon.avisoscampus.AvisosViewModelTest" time="0.003"/>
+  <testcase name="concederElPermisoBorraElMensajeDeErrorAnterior" classname="com.leon.avisoscampus.AvisosViewModelTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

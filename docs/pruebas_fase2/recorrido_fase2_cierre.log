@@ -1,0 +1,17 @@
+OK cargadorRealAmbosEstadosFueraDeAjustes True
+12_historial.png
+13_filtro_cargador.png
+OK filtroCargador True
+OK switchesApagadosNoGeneranAvisos True
+11_ajustes.png
+14_inicio_final.png
+15_oscuro.png
+16_oscuro_ajustes.png
+17_texto_130.png
+18_ajustes_130.png
+19_horizontal.png
+20_sin_animaciones.png
+OK variantesClaraOscuraTexto130HorizontalSinAnimacionesCapturadas True
+21_canales_permitidos.png
+OK sinCierresDuranteRecorrido True
+RECORRIDO COMPLETO {"dosCanales": true, "denegadoSinCierreConHistorial": true, "concederPermisoLimpiaError": true, "dosNotificacionesIndependientes": [2, 3], "toqueAbreYAutocancela": true, "cancelarNoNotifica": true, "recordatorioRotadoYMinimizado": true, "avionRealAmbosEstadosFueraDeAjustes": true, "cargadorRealAmbosEstadosFueraDeAjustes": true, "filtroCargador": true, "switchesApagadosNoGeneranAvisos": true, "variantesClaraOscuraTexto130HorizontalSinAnimacionesCapturadas": true, "sinCierresDuranteRecorrido": true}
