@@ -17,9 +17,15 @@ class AvisosViewModel(private val repo: AvisosRepository): ViewModel() {
   _permiso.value = if(concedido) PermisoUi.Concedido else PermisoUi.Denegado
   if(concedido) _mensaje.value = null
  }
+ // Espera la nueva pantalla si el aviso vence al recrear la composición.
+ // No conserva replay: un aviso entregado no reaparece al rotar.
+ private suspend fun emitir(aviso: Aviso) {
+  _eventos.subscriptionCount.first { it > 0 }
+  _eventos.emit(aviso)
+ }
  fun avisarAhora() { viewModelScope.launch {
   val aviso=repo.registrar("Tarea lista", "Tu entrega fue registrada", Origen.BOTON)
-  _eventos.emit(aviso)
+  emitir(aviso)
  } }
  private var trabajo: Job? = null
  private val _faltan = MutableStateFlow<Int?>(null)
@@ -31,7 +37,7 @@ class AvisosViewModel(private val repo: AvisosRepository): ViewModel() {
    try {
     for(segundo in segundos downTo 1) { _faltan.value=segundo; delay(1000) }
     val aviso=repo.registrar("Recordatorio", "Revisa tu laboratorio pendiente", Origen.RECORDATORIO)
-    _eventos.emit(aviso)
+    emitir(aviso)
    } finally { _faltan.value=null }
   }
  }
@@ -43,7 +49,7 @@ class AvisosViewModel(private val repo: AvisosRepository): ViewModel() {
   if(!_escuchandoAvion.value) return
   viewModelScope.launch {
    val aviso=repo.registrar("Modo avión", if(activo) "Activado" else "Desactivado", Origen.MODO_AVION)
-   _eventos.emit(aviso)
+   emitir(aviso)
   }
  }
  fun noSePudoMostrar() { _mensaje.value="Sin permiso: el aviso se guardó en el historial, pero no se mostró" }

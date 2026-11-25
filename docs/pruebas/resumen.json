@@ -1,0 +1,37 @@
+{
+  "unitarias": 17,
+  "Android": 12,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "total": 29,
+  "lint": {
+    "Warning": 9
+  },
+  "clases": [
+    {
+      "grupo": "unitarias",
+      "archivo": "TEST-com.leon.avisoscampus.AvisosRepositoryMemoriaTest.xml",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "grupo": "unitarias",
+      "archivo": "TEST-com.leon.avisoscampus.AvisosViewModelTest.xml",
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "grupo": "Android",
+      "archivo": "TEST-Pixel_8_Pro_2(AVD) - 17-_app-.xml",
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ]
+}

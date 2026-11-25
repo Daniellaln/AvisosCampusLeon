@@ -321,6 +321,25 @@ class AvisosViewModelTest {
         assertEquals(historialCompleto, vm.avisos.value)
     }
 
+    @Test
+    fun avisoEsperaUnRecolectorYNoSeRepiteAlReconectarlo() = runTest(dispatcher) {
+        val vm = AvisosViewModel(AvisosRepositoryMemoria())
+        vm.avisarAhora()
+        runCurrent()
+        assertEquals(1, vm.avisos.value.size)
+        val recibidos = mutableListOf<Aviso>()
+        val primero = backgroundScope.launch(UnconfinedTestDispatcher(testScheduler)) {
+            vm.eventos.collect { recibidos.add(it) }
+        }
+        runCurrent()
+        assertEquals(1, recibidos.size)
+        primero.cancel()
+        runCurrent()
+        val segundos = recibirEventosDe(vm)
+        runCurrent()
+        assertTrue(segundos.isEmpty())
+    }
+
     /** El recolector queda activo antes de emitir y runTest lo cancela al acabar. */
     private fun TestScope.recibirEventosDe(vm: AvisosViewModel): MutableList<Aviso> {
         val recibidos = mutableListOf<Aviso>()

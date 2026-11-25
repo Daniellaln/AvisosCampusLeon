@@ -1,0 +1,16 @@
+{
+  "canalAvisos": true,
+  "denegadoSinCierreConHistorial": true,
+  "abrirAjustes": true,
+  "permisoConcedidoLimpiaMensaje": true,
+  "dosIdsDistintos": [
+    "3",
+    "2"
+  ],
+  "tocarAbreYAutoCancela": true,
+  "cancelarNoNotifica": true,
+  "recordatorioMinimizadoYRotacion": true,
+  "modoAvionOnOff": true,
+  "filtroOrigen": true,
+  "switchApagadoNoNotifica": true
+}

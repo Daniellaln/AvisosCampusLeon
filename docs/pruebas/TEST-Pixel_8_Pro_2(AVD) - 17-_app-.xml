@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuites tests="12" failures="0" errors="0" skipped="0" time="23.191" timestamp="2026-11-25T18:46:54" hostname="localhost">
+  <testsuite name="com.leon.avisoscampus.AvisosNotificacionesAndroidTest" tests="4" failures="0" errors="0" skipped="0" time="5.345" timestamp="2026-11-25T18:46:54" hostname="localhost">
+    <properties>
+      <property name="device" value="Pixel_8_Pro_2(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="permisoConcedidoCoincideConElPermisoRealDeAndroid" classname="com.leon.avisoscampus.AvisosNotificacionesAndroidTest" time="0.026" />
+    <testcase name="crearElCanalDosVecesConservaIdentidadNombreEImportancia" classname="com.leon.avisoscampus.AvisosNotificacionesAndroidTest" time="0.005" />
+    <testcase name="dosIdsPermanecenPublicadosConContenidoIconoCanalEIntentInmutable" classname="com.leon.avisoscampus.AvisosNotificacionesAndroidTest" time="0.062" />
+    <testcase name="pendingIntentDeLaNotificacionAbreMainActivity" classname="com.leon.avisoscampus.AvisosNotificacionesAndroidTest" time="5.252" />
+  </testsuite>
+  <testsuite name="com.leon.avisoscampus.AvisosPantallaAndroidTest" tests="7" failures="0" errors="0" skipped="0" time="16.428" timestamp="2026-11-25T18:46:54" hostname="localhost">
+    <properties>
+      <property name="device" value="Pixel_8_Pro_2(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="dosPulsacionesGuardanDosAvisosYLosMuestranEnElHistorial" classname="com.leon.avisoscampus.AvisosPantallaAndroidTest" time="4.395" />
+    <testcase name="filtrosMuestranSoloSuOrigenYTodosRestauraLasFilas" classname="com.leon.avisoscampus.AvisosPantallaAndroidTest" time="2.597" />
+    <testcase name="recordatorioActivaLaCuentaYCancelarRestauraLosControles" classname="com.leon.avisoscampus.AvisosPantallaAndroidTest" time="2.328" />
+    <testcase name="filtroSinCoincidenciasExplicaPorQueNoHayFilas" classname="com.leon.avisoscampus.AvisosPantallaAndroidTest" time="1.399" />
+    <testcase name="limiteDeVeinteSeAplicaDespuesDelFiltro" classname="com.leon.avisoscampus.AvisosPantallaAndroidTest" time="1.803" />
+    <testcase name="interruptorActivaYDesactivaLaEscuchaEnElModelo" classname="com.leon.avisoscampus.AvisosPantallaAndroidTest" time="2.303" />
+    <testcase name="cincoTarjetasEnOrdenYSePuedeLlegarAlFinalYVolver" classname="com.leon.avisoscampus.AvisosPantallaAndroidTest" time="1.603" />
+  </testsuite>
+  <testsuite name="com.leon.avisoscampus.ModoAvionReceiverAndroidTest" tests="1" failures="0" errors="0" skipped="0" time="0.005" timestamp="2026-11-25T18:46:54" hostname="localhost">
+    <properties>
+      <property name="device" value="Pixel_8_Pro_2(AVD) - 17" />
+      <property name="flavor" value="" />
+      <property name="project" value=":app" />
+    </properties>
+    <testcase name="receptorAceptaSoloLaAccionCorrectaYLeeElEstado" classname="com.leon.avisoscampus.ModoAvionReceiverAndroidTest" time="0.005" />
+  </testsuite>
+</testsuites>

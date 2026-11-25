@@ -77,7 +77,9 @@ import com.leon.avisoscampus.receiver.ModoAvionReceiver
     Surface(color=MaterialTheme.colorScheme.errorContainer,shape=RoundedCornerShape(8.dp),modifier=Modifier.fillMaxWidth()) {
      Text(mensaje!!,color=MaterialTheme.colorScheme.onErrorContainer,modifier=Modifier.padding(14.dp).semantics { liveRegion=LiveRegionMode.Polite })
     }
-    OutlinedButton(onClick={ contexto.startActivity(Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS).putExtra(Settings.EXTRA_APP_PACKAGE,contexto.packageName)) }) { Text("Abrir ajustes") }
+    OutlinedButton(onClick={ val ajustes = if(Build.VERSION.SDK_INT >= 26) Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS).putExtra(Settings.EXTRA_APP_PACKAGE,contexto.packageName)
+     else Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, android.net.Uri.parse("package:"+contexto.packageName))
+     contexto.startActivity(ajustes) }) { Text("Abrir ajustes") }
    }
    Tarjeta("Avisos") { Button(onClick={ vm.avisarAhora() },enabled=true) { Text("Mostrar aviso") } }
    Tarjeta("Recordatorio") {

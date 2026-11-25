@@ -1,0 +1,13 @@
+01_inicio.png
+02_permiso_android.png
+03_denegado.png
+04_ajustes.png
+05_panel_notificaciones.png
+06_recordatorio.png
+07_rotacion.png
+08_recordatorio_panel.png
+09_modo_avion.png
+10_historial.png
+11_filtro_propio.png
+12_texto_grande.png
+Recorrido de aceptación completado. {"canalAvisos": true, "denegadoSinCierreConHistorial": true, "abrirAjustes": true, "permisoConcedidoLimpiaMensaje": true, "dosIdsDistintos": ["3", "2"], "tocarAbreYAutoCancela": true, "cancelarNoNotifica": true, "recordatorioMinimizadoYRotacion": true, "modoAvionOnOff": true, "filtroOrigen": true, "switchApagadoNoNotifica": true}
