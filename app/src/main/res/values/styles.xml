@@ -1,0 +1,1 @@
+<resources><style name="Theme.AvisosCampus" parent="android:style/Theme.Material.Light.NoActionBar"><item name="android:windowLightStatusBar">false</item><item name="android:colorAccent">#216F9B</item></style></resources>
