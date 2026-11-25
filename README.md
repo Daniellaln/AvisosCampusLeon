@@ -8,4 +8,4 @@ Avance 0: tarjetas de la guía sin funciones. JDK 21, SDK 37. Sin rutas locales 
 
 ## Avance actual
 
-7. Añadí la escucha del modo avión con un receptor que se registra y se retira al salir.
+8. Mostré los veinte avisos más recientes con su origen, texto y hora en el historial.

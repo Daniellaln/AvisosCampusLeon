@@ -86,7 +86,7 @@ import com.leon.avisoscampus.receiver.ModoAvionReceiver
     }
     Text("Activa o desactiva el modo avión del celular",style=MaterialTheme.typography.bodySmall)
    }
-   Tarjeta("Historial") { Text("Sin avisos todavía") }
+   HistorialAvisos(avisos)
   }
  }
 }
