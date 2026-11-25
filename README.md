@@ -8,4 +8,4 @@ Avance 0: tarjetas de la guía sin funciones. JDK 21, SDK 37. Sin rutas locales 
 
 ## Avance actual
 
-4. Conecté Mostrar aviso con el historial y las notificaciones locales con identificadores distintos.
+5. Hice que tocar una notificación abra la app usando un PendingIntent inmutable.

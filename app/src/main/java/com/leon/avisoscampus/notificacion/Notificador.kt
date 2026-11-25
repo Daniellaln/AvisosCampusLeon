@@ -26,6 +26,9 @@ object Notificador {
   val builder = NotificationCompat.Builder(context, CANAL)
    .setSmallIcon(R.drawable.ic_notificacion).setContentTitle(aviso.titulo).setContentText(aviso.texto)
    .setPriority(NotificationCompat.PRIORITY_DEFAULT).setAutoCancel(true)
+  val intent = Intent(context, MainActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
+  val pendiente = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_IMMUTABLE)
+  builder.setContentIntent(pendiente)
   return try { NotificationManagerCompat.from(context).notify(aviso.id, builder.build()); true }
   catch (_: SecurityException) { false }
  }
