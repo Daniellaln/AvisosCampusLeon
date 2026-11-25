@@ -42,3 +42,13 @@ Compórtate como un experto en recursos visuales de Android. Ayúdame a integrar
 |---|---|---|---|
 | Bloque 4 | Pendiente de ejecutar por la estudiante | Creé las ilustraciones de vidrio, el logo, los iconos SVG y la tipografía local del diseño; implementación comprobada con Codex | Conservar el contrato de la guía y la decisión de diseño de Daniella |
 
+## 5. diseno
+
+```text
+Compórtate como un experto en diseño Android, Jetpack Compose, Material 3 y animaciones. Necesito replicar el diseño final Luz y vidrio de AvisosCampus siguiendo DESIGN.md, docs/capturas_fase2, los SVG y las tres ilustraciones de drawable-nodpi. Mantén azul luminoso, coral contenido, blanco frío y la fuente local. Sustituye las cinco tarjetas apiladas por tres destinos nativos: Avisos, Historial y Ajustes. Avisos muestra el estado de permiso, un selector Ahora / En 10 s, campana o reloj de vidrio y una sola acción principal. La cuenta usa los segundos reales del ViewModel, permite cancelar y sigue reconocible al navegar. Historial muestra los veinte más recientes, con origen, hora y el filtro propio; el vacío usa su ilustración. Ajustes agrupa permiso, acceso a Ajustes Android y escuchas independientes de avión/cargador. La recogida de eventos y los receptores viven fuera del contenido de cada pestaña y se retiran al salir de la composición. Da respuesta al tacto, ondas al enviar, animación de dígitos/progreso y cambios de sección y entradas del historial. Respeta movimiento desactivado, 48dp, texto130%, oscuro, horizontal, teclado e insets. Los controles usan capas claras y reflejos; no prometas refracción del fondo que el código no hace. Mantén toda la lógica MVVM y pruebas de la base, sin inventar entrega después de matar el proceso ni historial persistente.
+```
+
+| Prompt | Respuesta de Gemini | Qué cambié o descarté | Por qué |
+|---|---|---|---|
+| Bloque 5 | Pendiente de ejecutar por la estudiante | Reorganicé Avisos, Historial y Ajustes con controles de vidrio, una tarea visible y animaciones de los procesos; implementación comprobada con Codex | Conservar el contrato de la guía y la decisión de diseño de Daniella |
+
