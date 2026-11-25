@@ -12,3 +12,13 @@ Compórtate como un experto en notificaciones Android y MVVM. Ayúdame a añadir
 |---|---|---|---|
 | Bloque 1 | Pendiente de ejecutar por la estudiante | Añadí el canal Urgentes para los recordatorios y conservé Avisos para las otras notificaciones; implementación comprobada con Codex | Conservar el contrato de la guía y la decisión de diseño de Daniella |
 
+## 2. texto expandido
+
+```text
+Compórtate como un experto en Android con NotificationCompat. Ayúdame a mostrar el texto completo de cada aviso al expandirlo mediante BigTextStyle().bigText(aviso.texto) dentro de Notificador.mostrar. Conserva título, setContentText, canales, PendingIntent inmutable, ids y autoCancel. No recortes el texto ni simules una notificación con una vista de Compose. Verifica con un aviso ficticio largo que Notification.EXTRA_BIG_TEXT conserva el texto completo.
+```
+
+| Prompt | Respuesta de Gemini | Qué cambié o descarté | Por qué |
+|---|---|---|---|
+| Bloque 2 | Pendiente de ejecutar por la estudiante | Mostré el contenido completo de las notificaciones al expandirlas con BigTextStyle; implementación comprobada con Codex | Conservar el contrato de la guía y la decisión de diseño de Daniella |
+
