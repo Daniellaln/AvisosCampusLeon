@@ -47,4 +47,7 @@ class AvisosViewModel(private val repo: AvisosRepository): ViewModel() {
   }
  }
  fun noSePudoMostrar() { _mensaje.value="Sin permiso: el aviso se guardó en el historial, pero no se mostró" }
+ private val _origenFiltro=MutableStateFlow<Origen?>(null)
+ val origenFiltro: StateFlow<Origen?> = _origenFiltro.asStateFlow()
+ fun filtrarHistorial(origen: Origen?) { _origenFiltro.value=origen }
 }

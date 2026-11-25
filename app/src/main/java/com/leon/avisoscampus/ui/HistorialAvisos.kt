@@ -6,10 +6,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.*
 import androidx.compose.ui.unit.dp
 import com.leon.avisoscampus.model.*
-@Composable fun HistorialAvisos(avisos: List<Aviso>) {
+@Composable fun HistorialAvisos(avisos: List<Aviso>,filtro: Origen?=null,onFiltro:(Origen?)->Unit={}) {
  Tarjeta("Historial") {
-  val visibles=avisos.take(20)
-  if(visibles.isEmpty()) Text("Sin avisos todavía")
+  Row(Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),horizontalArrangement=Arrangement.spacedBy(6.dp)) {
+   FilterChip(selected=filtro==null,onClick={ onFiltro(null) },label={ Text("Todos") })
+   Origen.entries.forEach { origen -> FilterChip(selected=filtro==origen,onClick={ onFiltro(origen) },label={ Text(origen.texto) }) }
+  }
+  val visibles=avisos.filter { filtro==null || it.origen==filtro }.take(20)
+  if(visibles.isEmpty()) Text(if(avisos.isEmpty()) "Sin avisos todavía" else "Sin avisos de este origen")
   visibles.forEach { aviso ->
    Column(Modifier.fillMaxWidth().padding(vertical=5.dp),verticalArrangement=Arrangement.spacedBy(4.dp)) {
     Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.SpaceBetween) {

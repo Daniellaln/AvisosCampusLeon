@@ -62,6 +62,7 @@ import com.leon.avisoscampus.receiver.ModoAvionReceiver
    onDispose { contexto.unregisterReceiver(receptor) }
   } else { onDispose { } }
  }
+ val filtro by vm.origenFiltro.collectAsState()
  Scaffold(topBar={ TopAppBar(title={ Text("AvisosCampus") },colors=TopAppBarDefaults.topAppBarColors(containerColor=MaterialTheme.colorScheme.primary,titleContentColor=Color.White)) }) { margen ->
   Column(Modifier.fillMaxSize().padding(margen).verticalScroll(rememberScrollState()).padding(16.dp),verticalArrangement=Arrangement.spacedBy(14.dp)) {
    Tarjeta("Permiso de notificaciones") {
@@ -93,7 +94,7 @@ import com.leon.avisoscampus.receiver.ModoAvionReceiver
     }
     Text("Activa o desactiva el modo avión del celular",style=MaterialTheme.typography.bodySmall)
    }
-   HistorialAvisos(avisos)
+   HistorialAvisos(avisos,filtro,vm::filtrarHistorial)
   }
  }
 }
