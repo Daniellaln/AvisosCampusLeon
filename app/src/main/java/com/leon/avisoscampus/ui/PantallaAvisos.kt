@@ -24,6 +24,7 @@ import com.leon.avisoscampus.model.*
 import com.leon.avisoscampus.notificacion.Notificador
 import com.leon.avisoscampus.viewmodel.AvisosViewModel
 import com.leon.avisoscampus.receiver.ModoAvionReceiver
+import com.leon.avisoscampus.receiver.CargadorReceiver
 
 @Composable fun Tarjeta(titulo: String, contenido: @Composable ColumnScope.()->Unit) {
  Card(Modifier.fillMaxWidth(),shape=RoundedCornerShape(12.dp),colors=CardDefaults.cardColors(containerColor=MaterialTheme.colorScheme.surface),border=BorderStroke(1.dp,Color(0xFFDFE1E7))) {
@@ -62,6 +63,18 @@ import com.leon.avisoscampus.receiver.ModoAvionReceiver
    onDispose { contexto.unregisterReceiver(receptor) }
   } else { onDispose { } }
  }
+ val escuchandoCargador by vm.escuchandoCargador.collectAsState()
+ DisposableEffect(vm,escuchandoCargador,contexto) {
+  if(escuchandoCargador) {
+   val receptor=CargadorReceiver(vm::alCambiarCargador)
+   val acciones=IntentFilter().apply {
+    addAction(Intent.ACTION_POWER_CONNECTED)
+    addAction(Intent.ACTION_POWER_DISCONNECTED)
+   }
+   ContextCompat.registerReceiver(contexto,receptor,acciones,ContextCompat.RECEIVER_NOT_EXPORTED)
+   onDispose { contexto.unregisterReceiver(receptor) }
+  } else { onDispose { } }
+ }
  val filtro by vm.origenFiltro.collectAsState()
  Scaffold(topBar={ TopAppBar(title={ Text("AvisosCampus") },colors=TopAppBarDefaults.topAppBarColors(containerColor=MaterialTheme.colorScheme.primary,titleContentColor=Color.White)) }) { margen ->
   Column(Modifier.fillMaxSize().padding(margen).verticalScroll(rememberScrollState()).padding(16.dp),verticalArrangement=Arrangement.spacedBy(14.dp)) {
@@ -95,6 +108,11 @@ import com.leon.avisoscampus.receiver.ModoAvionReceiver
      Switch(checked=escuchando,onCheckedChange={ vm.cambiarEscucha(it) },enabled=true,modifier=Modifier.semantics { contentDescription="Escuchar el modo avión" })
     }
     Text("Activa o desactiva el modo avión del celular",style=MaterialTheme.typography.bodySmall)
+    Row(Modifier.fillMaxWidth(),verticalAlignment=Alignment.CenterVertically) {
+     Text("Escuchar el cargador",modifier=Modifier.weight(1f))
+     Switch(checked=escuchandoCargador,onCheckedChange={ vm.cambiarEscuchaCargador(it) },enabled=true,modifier=Modifier.semantics { contentDescription="Escuchar el cargador" })
+    }
+    Text("Conecta o desconecta el cargador del celular",style=MaterialTheme.typography.bodySmall)
    }
    HistorialAvisos(avisos,filtro,vm::filtrarHistorial)
   }

@@ -22,3 +22,13 @@ Compórtate como un experto en Android con NotificationCompat. Ayúdame a mostra
 |---|---|---|---|
 | Bloque 2 | Pendiente de ejecutar por la estudiante | Mostré el contenido completo de las notificaciones al expandirlas con BigTextStyle; implementación comprobada con Codex | Conservar el contrato de la guía y la decisión de diseño de Daniella |
 
+## 3. cargador
+
+```text
+Compórtate como un experto en BroadcastReceiver, corrutinas y MVVM. Necesito que AvisosCampus escuche conectar y desconectar el cargador con un interruptor independiente. Añade Origen.CARGADOR con texto Cargador, CargadorReceiver con ACTION_POWER_CONNECTED y ACTION_POWER_DISCONNECTED y un callback Boolean corto. AvisosViewModel expone escuchandoCargador, cambiarEscuchaCargador y alCambiarCargador; empieza apagado, ignora cambios cuando está apagado y cuando escucha registra Cargador / Conectado o Desconectado y emite el mismo aviso. La pantalla registra con RECEIVER_NOT_EXPORTED y siempre retira el receptor en onDispose, sin perderlo al navegar entre destinos. Conserva el modo avión, recordatorio, historial y filtro propio de fase1. Ningún Context llega al ViewModel o Repository. Prueba ambos estados y las dos escuchas independientes.
+```
+
+| Prompt | Respuesta de Gemini | Qué cambié o descarté | Por qué |
+|---|---|---|---|
+| Bloque 3 | Pendiente de ejecutar por la estudiante | Agregué la escucha del cargador con su propio interruptor y conservé el filtro por origen; implementación comprobada con Codex | Conservar el contrato de la guía y la decisión de diseño de Daniella |
+
