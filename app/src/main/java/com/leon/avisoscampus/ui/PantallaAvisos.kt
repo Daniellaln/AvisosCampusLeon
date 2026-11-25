@@ -48,6 +48,9 @@ import com.leon.avisoscampus.viewmodel.AvisosViewModel
   onDispose { ciclo.lifecycle.removeObserver(observador) }
  }
  LaunchedEffect(Unit) { if(Notificador.tienePermiso(contexto)) vm.permisoRespondido(true) }
+ LaunchedEffect(vm,contexto) { vm.eventos.collect { aviso ->
+  val mostrado=Notificador.mostrar(contexto,aviso)
+ } }
  Scaffold(topBar={ TopAppBar(title={ Text("AvisosCampus") },colors=TopAppBarDefaults.topAppBarColors(containerColor=MaterialTheme.colorScheme.primary,titleContentColor=Color.White)) }) { margen ->
   Column(Modifier.fillMaxSize().padding(margen).verticalScroll(rememberScrollState()).padding(16.dp),verticalArrangement=Arrangement.spacedBy(14.dp)) {
    Tarjeta("Permiso de notificaciones") {
@@ -58,7 +61,7 @@ import com.leon.avisoscampus.viewmodel.AvisosViewModel
     }
     Button(onClick={ if(Build.VERSION.SDK_INT>=33) lanzador.launch(Manifest.permission.POST_NOTIFICATIONS) else vm.permisoRespondido(true) },enabled=true) { Text("Permitir notificaciones") }
    }
-   Tarjeta("Avisos") { Button(onClick={  },enabled=false) { Text("Mostrar aviso") } }
+   Tarjeta("Avisos") { Button(onClick={ vm.avisarAhora() },enabled=true) { Text("Mostrar aviso") } }
    Tarjeta("Recordatorio") {
     FlowRow(horizontalArrangement=Arrangement.spacedBy(8.dp)) {
      Button(onClick={  },enabled=false) { Text("Recordar en 10 s") }
