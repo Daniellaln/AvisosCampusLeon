@@ -23,6 +23,7 @@ import androidx.core.content.ContextCompat
 import com.leon.avisoscampus.model.*
 import com.leon.avisoscampus.notificacion.Notificador
 import com.leon.avisoscampus.viewmodel.AvisosViewModel
+import com.leon.avisoscampus.receiver.ModoAvionReceiver
 
 @Composable fun Tarjeta(titulo: String, contenido: @Composable ColumnScope.()->Unit) {
  Card(Modifier.fillMaxWidth(),shape=RoundedCornerShape(12.dp),colors=CardDefaults.cardColors(containerColor=MaterialTheme.colorScheme.surface),border=BorderStroke(1.dp,Color(0xFFDFE1E7))) {
@@ -52,6 +53,14 @@ import com.leon.avisoscampus.viewmodel.AvisosViewModel
   val mostrado=Notificador.mostrar(contexto,aviso)
  } }
  val faltan by vm.faltan.collectAsState()
+ val escuchando by vm.escuchandoAvion.collectAsState()
+ DisposableEffect(escuchando,contexto) {
+  if(escuchando) {
+   val receptor=ModoAvionReceiver(vm::alCambiarModoAvion)
+   ContextCompat.registerReceiver(contexto,receptor,IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED),ContextCompat.RECEIVER_NOT_EXPORTED)
+   onDispose { contexto.unregisterReceiver(receptor) }
+  } else { onDispose { } }
+ }
  Scaffold(topBar={ TopAppBar(title={ Text("AvisosCampus") },colors=TopAppBarDefaults.topAppBarColors(containerColor=MaterialTheme.colorScheme.primary,titleContentColor=Color.White)) }) { margen ->
   Column(Modifier.fillMaxSize().padding(margen).verticalScroll(rememberScrollState()).padding(16.dp),verticalArrangement=Arrangement.spacedBy(14.dp)) {
    Tarjeta("Permiso de notificaciones") {
@@ -73,7 +82,7 @@ import com.leon.avisoscampus.viewmodel.AvisosViewModel
    Tarjeta("Receptor de anuncios") {
     Row(Modifier.fillMaxWidth(),verticalAlignment=Alignment.CenterVertically) {
      Text("Escuchar el modo avión",modifier=Modifier.weight(1f))
-     Switch(checked=false,onCheckedChange={  },enabled=false,modifier=Modifier.semantics { contentDescription="Escuchar el modo avión" })
+     Switch(checked=escuchando,onCheckedChange={ vm.cambiarEscucha(it) },enabled=true,modifier=Modifier.semantics { contentDescription="Escuchar el modo avión" })
     }
     Text("Activa o desactiva el modo avión del celular",style=MaterialTheme.typography.bodySmall)
    }
