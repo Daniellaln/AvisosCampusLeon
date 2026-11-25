@@ -8,4 +8,4 @@ Avance 0: tarjetas de la guía sin funciones. JDK 21, SDK 37. Sin rutas locales 
 
 ## Avance actual
 
-5. Hice que tocar una notificación abra la app usando un PendingIntent inmutable.
+6. Programé el recordatorio de diez segundos con cuenta regresiva, cancelación y protección contra duplicados.

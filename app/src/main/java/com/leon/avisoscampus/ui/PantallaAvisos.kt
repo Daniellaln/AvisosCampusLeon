@@ -51,6 +51,7 @@ import com.leon.avisoscampus.viewmodel.AvisosViewModel
  LaunchedEffect(vm,contexto) { vm.eventos.collect { aviso ->
   val mostrado=Notificador.mostrar(contexto,aviso)
  } }
+ val faltan by vm.faltan.collectAsState()
  Scaffold(topBar={ TopAppBar(title={ Text("AvisosCampus") },colors=TopAppBarDefaults.topAppBarColors(containerColor=MaterialTheme.colorScheme.primary,titleContentColor=Color.White)) }) { margen ->
   Column(Modifier.fillMaxSize().padding(margen).verticalScroll(rememberScrollState()).padding(16.dp),verticalArrangement=Arrangement.spacedBy(14.dp)) {
    Tarjeta("Permiso de notificaciones") {
@@ -64,9 +65,10 @@ import com.leon.avisoscampus.viewmodel.AvisosViewModel
    Tarjeta("Avisos") { Button(onClick={ vm.avisarAhora() },enabled=true) { Text("Mostrar aviso") } }
    Tarjeta("Recordatorio") {
     FlowRow(horizontalArrangement=Arrangement.spacedBy(8.dp)) {
-     Button(onClick={  },enabled=false) { Text("Recordar en 10 s") }
-     OutlinedButton(onClick={  },enabled=false) { Text("Cancelar") }
+     Button(onClick={ vm.recordarEn() },enabled=faltan==null) { Text("Recordar en 10 s") }
+     OutlinedButton(onClick={ vm.cancelarRecordatorio() },enabled=faltan!=null) { Text("Cancelar") }
     }
+    faltan?.let { Text("Faltan $it s",style=MaterialTheme.typography.titleMedium,modifier=Modifier.semantics { liveRegion=LiveRegionMode.Polite }) }
    }
    Tarjeta("Receptor de anuncios") {
     Row(Modifier.fillMaxWidth(),verticalAlignment=Alignment.CenterVertically) {
