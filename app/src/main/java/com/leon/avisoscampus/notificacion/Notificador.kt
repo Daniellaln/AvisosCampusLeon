@@ -13,7 +13,10 @@ import com.leon.avisoscampus.model.Aviso
 object Notificador {
  const val CANAL = "avisos"
  fun crearCanal(context: Context) {
- // Paso 1: registrar el canal.
+ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+   context.getSystemService(NotificationManager::class.java).createNotificationChannel(
+    NotificationChannel(CANAL, "Avisos", NotificationManager.IMPORTANCE_DEFAULT))
+  }
  }
  fun tienePermiso(context: Context): Boolean = false
  @SuppressLint("MissingPermission")
