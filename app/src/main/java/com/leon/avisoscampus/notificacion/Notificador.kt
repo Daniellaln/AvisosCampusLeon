@@ -18,7 +18,7 @@ object Notificador {
     NotificationChannel(CANAL, "Avisos", NotificationManager.IMPORTANCE_DEFAULT))
   }
  }
- fun tienePermiso(context: Context): Boolean = false
+ fun tienePermiso(context: Context): Boolean = Build.VERSION.SDK_INT < 33 || ContextCompat.checkSelfPermission(context, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED
  @SuppressLint("MissingPermission")
  fun mostrar(context: Context, aviso: Aviso): Boolean {
  return false // Paso 3: construir y mostrar.

@@ -8,4 +8,4 @@ Avance 0: tarjetas de la guía sin funciones. JDK 21, SDK 37. Sin rutas locales 
 
 ## Avance actual
 
-2. Creé el canal Avisos al iniciar la aplicación y lo registré en el Manifest.
+3. Añadí la solicitud de POST_NOTIFICATIONS y los estados Sin pedir, Permitido y Denegado.
