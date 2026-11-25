@@ -8,4 +8,4 @@ Avance 0: tarjetas de la guía sin funciones. JDK 21, SDK 37. Sin rutas locales 
 
 ## Avance actual
 
-8. Mostré los veinte avisos más recientes con su origen, texto y hora en el historial.
+9. Conservé el historial al denegar notificaciones y añadí el aviso de error y el acceso a Ajustes.

@@ -51,6 +51,7 @@ import com.leon.avisoscampus.receiver.ModoAvionReceiver
  LaunchedEffect(Unit) { if(Notificador.tienePermiso(contexto)) vm.permisoRespondido(true) }
  LaunchedEffect(vm,contexto) { vm.eventos.collect { aviso ->
   val mostrado=Notificador.mostrar(contexto,aviso)
+  if(!mostrado) vm.noSePudoMostrar()
  } }
  val faltan by vm.faltan.collectAsState()
  val escuchando by vm.escuchandoAvion.collectAsState()
@@ -70,6 +71,12 @@ import com.leon.avisoscampus.receiver.ModoAvionReceiver
      Text(when(permiso) { PermisoUi.Concedido->"Permitido";PermisoUi.Denegado->"Denegado";else->"Sin pedir" },color=color,modifier=Modifier.semantics { liveRegion=LiveRegionMode.Polite })
     }
     Button(onClick={ if(Build.VERSION.SDK_INT>=33) lanzador.launch(Manifest.permission.POST_NOTIFICATIONS) else vm.permisoRespondido(true) },enabled=true) { Text("Permitir notificaciones") }
+   }
+   if(mensaje!=null) {
+    Surface(color=MaterialTheme.colorScheme.errorContainer,shape=RoundedCornerShape(8.dp),modifier=Modifier.fillMaxWidth()) {
+     Text(mensaje!!,color=MaterialTheme.colorScheme.onErrorContainer,modifier=Modifier.padding(14.dp).semantics { liveRegion=LiveRegionMode.Polite })
+    }
+    OutlinedButton(onClick={ contexto.startActivity(Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS).putExtra(Settings.EXTRA_APP_PACKAGE,contexto.packageName)) }) { Text("Abrir ajustes") }
    }
    Tarjeta("Avisos") { Button(onClick={ vm.avisarAhora() },enabled=true) { Text("Mostrar aviso") } }
    Tarjeta("Recordatorio") {
