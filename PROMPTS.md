@@ -32,3 +32,13 @@ Compórtate como un experto en BroadcastReceiver, corrutinas y MVVM. Necesito qu
 |---|---|---|---|
 | Bloque 3 | Pendiente de ejecutar por la estudiante | Agregué la escucha del cargador con su propio interruptor y conservé el filtro por origen; implementación comprobada con Codex | Conservar el contrato de la guía y la decisión de diseño de Daniella |
 
+## 4. recursos
+
+```text
+Compórtate como un experto en recursos visuales de Android. Ayúdame a integrar los recursos versionados de diseno/RECURSOS.md: ilustraciones aviso_campana.png, aviso_reloj.png y aviso_historial_vacio.png en drawable-nodpi con transparencia real, fuente local y licencia en res/font y diseno/licencias, logo y SVG propios en diseno/iconos con sus VectorDrawable de drawable. Mantén el icono pequeño de notificación separado del icono de aplicación. Consulta diseno/IMAGENES.json para los prompts completos y procedencia; no uses una imagen de toda la pantalla como interfaz ni dependas de archivos del Escritorio. Las ilustraciones se integran en la escena activa, no son stickers arbitrarios.
+```
+
+| Prompt | Respuesta de Gemini | Qué cambié o descarté | Por qué |
+|---|---|---|---|
+| Bloque 4 | Pendiente de ejecutar por la estudiante | Creé las ilustraciones de vidrio, el logo, los iconos SVG y la tipografía local del diseño; implementación comprobada con Codex | Conservar el contrato de la guía y la decisión de diseño de Daniella |
+

@@ -1,0 +1,20 @@
+[
+  {
+    "archivo": "aviso_campana.png",
+    "herramienta": "image_gen integrada",
+    "prompt": "Use case: product-mockup. Asset type: real transparent PNG illustration for a polished Android notification app named AvisosCampus, not a UI mockup. A single sculptural notification bell made from optically clear icy blue glass, with a rich cobalt blue glass inner clapper and a small coral orange satin glass finial, standing naturally on a very low transparent circular glass plinth. Modern collectible design exhibition object, premium precise physical rendering, beautiful thick rounded transparent rim, internal refraction, white specular edge lighting, soft blue caustics and a faint grounded contact shadow. Slight three quarter frontal view, large bell centered in frame filling about 70 percent, eye level, no dramatic perspective. Palette pure clear glass, luminous periwinkle blue, saturated cobalt and restrained warm coral, cool white lighting. Sophisticated youthful feminine care, lively and fresh, not vintage, not beige, not a toy, no emoji face. Completely transparent background and wide clean margins, no full scene, no lettering, no numbers, no text, no logo, no interface, no extra floating shapes. The full bell and its base remain within frame; usable over both cool white and navy Android surfaces.",
+    "uso": "acción inmediata"
+  },
+  {
+    "archivo": "aviso_reloj.png",
+    "herramienta": "image_gen integrada",
+    "prompt": "Use case: product-mockup. Asset type: real transparent PNG illustration for the reminder state of a premium Android notification app, not a UI mockup. A sculptural upright hourglass made from thick optically clear icy blue glass, a bright cobalt glass top and base with narrow restrained coral orange rings. Inside it is a fine trail of warm coral translucent sand between the two delicate bulb chambers. Match a contemporary collectible glass design exhibition aesthetic, physically grounded on a very low clear glass disc. Precise studio rendering, beautiful transparent thick rounded edges, crisp white highlights and subtle caustic light, a gentle contact shadow only. Slight three quarter frontal view, centered object filling 70 percent of frame with all edges inside generous transparent margins. Fresh youthful sophisticated femininity, clear bright blue and coral, luminous cool white lighting, not beige, not vintage, not cartoon. Genuinely transparent background, no text, numbers, logos, interface, clock dial or extra floating shapes. Suitable on cool white and dark navy surfaces.",
+    "uso": "recordatorio y cuenta"
+  },
+  {
+    "archivo": "aviso_historial_vacio.png",
+    "herramienta": "image_gen integrada",
+    "prompt": "Use case: product-mockup. Asset type: genuinely transparent PNG illustration for the empty history state in a modern Android notification app, not an interface. A small beautiful cobalt and clear glass inbox tray with one cream-white glossy envelope resting upright inside it, with a tiny coral wax-like rounded circle seal, no lettering. Elegant thick optically clear blue glass rounded edge detail, restrained coral accents, grounded physical arrangement. Contemporary product studio rendering matching a collectible blue glass notification bell and hourglass family. Bright cool daylight, soft contact shadow under the tray only, fine crisp white highlights, very clean composition. Three quarter view at eye level, centered compact sculpture filling 65 percent of the image with generous transparent margins. Fresh premium student app, subtle feminine care, not cute cartoon emoji, no beige paper texture, no background. Real alpha transparent background; no text, no numbers, no logo, no UI, no stray floating ornaments.",
+    "uso": "historial vacío"
+  }
+]
